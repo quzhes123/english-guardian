@@ -83,5 +83,34 @@ Page({
     audioContext.onError((err) => {
       wx.showToast({ title: '播放失败', icon: 'none' });
     });
+  },
+
+  addWord() {
+    wx.showModal({
+      title: '追加单词',
+      editable: true,
+      placeholderText: '输入单词',
+      success: (res) => {
+        if (res.confirm && res.content) {
+          const newWord = res.content.trim().toLowerCase();
+          if (newWord) {
+            // 获取现有单词数作为新ID
+            const maxId = vocabulary.length > 0 ? Math.max(...vocabulary.map(w => w.id)) : 0;
+            const newEntry = {
+              id: maxId + 1,
+              word: newWord,
+              phonetic: `/${newWord}/`,
+              meaning: '自定义单词',
+              level: 1,
+              isCustom: true
+            };
+            wx.showToast({
+              title: '单词已添加',
+              icon: 'success'
+            });
+          }
+        }
+      }
+    });
   }
 });

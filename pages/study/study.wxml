@@ -10,11 +10,11 @@
     <view class="card-front {{isFlipped ? 'hidden' : ''}}">
       <text class="word">{{currentWord.word}}</text>
       <text class="phonetic">{{currentWord.phonetic}}</text>
-      <view class="audio-btn" bindtap="playAudio">
+      <view class="audio-btn" catchtap="playAudio">
         <text class="audio-icon">🔊</text>
         <text class="audio-text">发音</text>
       </view>
-      <text class="hint">点击查看中文释义</text>
+      <text class="hint">点击卡片查看中文释义</text>
     </view>
     <view class="card-back {{isFlipped ? '' : 'hidden'}}">
       <text class="meaning">{{currentWord.meaning}}</text>

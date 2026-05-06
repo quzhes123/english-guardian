@@ -8,14 +8,35 @@
 .search-bar {
   padding: 20rpx 30rpx;
   background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
 }
 
 .search-input {
+  flex: 1;
   height: 70rpx;
   background: #F5F5F5;
   border-radius: 35rpx;
   padding: 0 30rpx;
   font-size: 28rpx;
+}
+
+.add-btn {
+  width: 70rpx;
+  height: 70rpx;
+  background: linear-gradient(135deg, #4A90D9, #67B26F);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4rpx 15rpx rgba(74, 144, 217, 0.3);
+}
+
+.add-icon {
+  font-size: 40rpx;
+  color: #FFFFFF;
+  font-weight: bold;
 }
 
 .letter-nav {

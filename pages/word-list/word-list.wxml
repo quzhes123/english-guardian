@@ -5,6 +5,9 @@
            placeholder="搜索单词..." 
            bindinput="onSearch"
            value="{{searchKey}}"/>
+    <view class="add-btn" bindtap="addWord">
+      <text class="add-icon">+</text>
+    </view>
   </view>
 
   <!-- 字母导航 -->
