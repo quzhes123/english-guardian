@@ -46,7 +46,7 @@
   "projectname": "english-guardian",
   "condition": {},
   "editorSetting": {
-    "tabIndent": "insertSpace",
+    "tabIndent": "insertSpaces",
     "tabSize": 2
   }
 }
