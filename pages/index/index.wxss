@@ -31,6 +31,7 @@
 .date {
   font-size: 24rpx;
   color: rgba(255, 255, 255, 0.8);
+  font-weight: normal;
 }
 
 .streak-badge {
@@ -65,10 +66,12 @@
   padding: 30rpx;
   border-radius: 20rpx;
   box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+  border: 1rpx solid #F0F0F0;
 }
 
 .checkin-card.checked {
   background: #E8F5E9;
+  border-color: #C8E6C9;
 }
 
 .checkin-info {
@@ -79,28 +82,32 @@
 .checkin-title {
   font-size: 32rpx;
   font-weight: bold;
-  color: #333;
+  color: #333333;
   margin-bottom: 10rpx;
 }
 
 .checkin-subtitle {
   font-size: 24rpx;
-  color: #666;
+  font-weight: normal;
+  color: #999999;
 }
 
 .checkin-btn {
   width: 160rpx;
   height: 70rpx;
   line-height: 70rpx;
-  background: #4A90D9;
+  background: linear-gradient(135deg, #4A90D9, #67B26F);
   color: #FFFFFF;
   font-size: 28rpx;
+  font-weight: 500;
   border-radius: 35rpx;
   border: none;
+  box-shadow: 0 4rpx 15rpx rgba(74, 144, 217, 0.3);
 }
 
 .checkin-btn.disabled {
   background: #CCCCCC;
+  box-shadow: none;
 }
 
 /* 今日任务区域 */
@@ -114,14 +121,14 @@
   align-items: center;
   font-size: 32rpx;
   font-weight: bold;
-  color: #333;
+  color: #333333;
   margin-bottom: 20rpx;
   padding: 0 10rpx;
 }
 
 .progress-text {
   font-size: 24rpx;
-  color: #999;
+  color: #999999;
   font-weight: normal;
 }
 
@@ -138,6 +145,7 @@
   padding: 30rpx 20rpx;
   border-radius: 20rpx;
   box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+  border: 1rpx solid #F0F0F0;
 }
 
 .task-card.review {
@@ -162,13 +170,14 @@
 .task-name {
   font-size: 28rpx;
   font-weight: bold;
-  color: #333;
+  color: #333333;
   margin-bottom: 8rpx;
 }
 
 .task-count {
   font-size: 22rpx;
-  color: #999;
+  font-weight: normal;
+  color: #999999;
 }
 
 .task-arrow {
@@ -195,6 +204,7 @@
   padding: 30rpx 10rpx;
   border-radius: 16rpx;
   box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+  border: 1rpx solid #F0F0F0;
 }
 
 .quick-icon {
@@ -204,5 +214,6 @@
 
 .quick-text {
   font-size: 24rpx;
-  color: #666;
+  font-weight: normal;
+  color: #666666;
 }

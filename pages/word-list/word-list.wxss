@@ -16,10 +16,12 @@
 .search-input {
   flex: 1;
   height: 70rpx;
-  background: #FFFFFF;
+  background: #F8F8F8;
   border-radius: 35rpx;
   padding: 0 30rpx;
   font-size: 28rpx;
+  color: #333333;
+  border: 1rpx solid #E8E8E8;
 }
 
 .add-btn {
@@ -44,7 +46,7 @@
   flex-wrap: wrap;
   padding: 15rpx 20rpx;
   background: #FFFFFF;
-  border-bottom: 1rpx solid #E0E0E0;
+  border-bottom: 1rpx solid #F0F0F0;
 }
 
 .letter-item {
@@ -53,7 +55,7 @@
   line-height: 50rpx;
   text-align: center;
   font-size: 24rpx;
-  color: #666;
+  color: #666666;
   margin: 5rpx;
 }
 
@@ -93,6 +95,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 1rpx solid #F0F0F0;
 }
 
 .word-main {
@@ -103,27 +106,28 @@
 .word-text {
   font-size: 32rpx;
   font-weight: bold;
-  color: #333;
+  color: #333333;
   margin-bottom: 8rpx;
 }
 
 .word-phonetic {
   font-size: 22rpx;
-  color: #999;
+  font-weight: normal;
+  color: #999999;
 }
 
-.word-meaning {
-  font-size: 26rpx;
-  color: #666;
-  max-width: 200rpx;
-  text-align: right;
-}
-
-/* 单词操作区域 */
 .word-actions {
   display: flex;
   align-items: center;
   gap: 15rpx;
+}
+
+.word-meaning {
+  font-size: 26rpx;
+  font-weight: normal;
+  color: #666666;
+  max-width: 200rpx;
+  text-align: right;
 }
 
 /* 小发音按钮 */

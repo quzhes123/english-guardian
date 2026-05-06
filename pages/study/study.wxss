@@ -11,7 +11,7 @@
 .progress-bar {
   width: 100%;
   height: 12rpx;
-  background: #E0E0E0;
+  background: #F5F5F5;
   border-radius: 6rpx;
   margin-bottom: 15rpx;
   overflow: hidden;
@@ -26,7 +26,7 @@
 
 .progress-text {
   font-size: 24rpx;
-  color: #999;
+  color: #999999;
   margin-bottom: 40rpx;
 }
 
@@ -36,13 +36,14 @@
   height: 450rpx;
   background: #FFFFFF;
   border-radius: 30rpx;
-  box-shadow: 0 8rpx 40rpx rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8rpx 40rpx rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 50rpx;
   position: relative;
+  border: 1rpx solid #F0F0F0;
 }
 
 .card-front, .card-back {
@@ -63,22 +64,80 @@
   display: none;
 }
 
+/* 主标题文字 - 单词 */
 .word {
   font-size: 64rpx;
   font-weight: bold;
-  color: #333;
+  color: #333333;
   margin-bottom: 20rpx;
+  text-align: center;
 }
 
+/* 副标题文字 - 音标 */
 .phonetic {
   font-size: 28rpx;
-  color: #999;
-  margin-bottom: 40rpx;
+  font-weight: normal;
+  color: #999999;
+  margin-bottom: 30rpx;
+  text-align: center;
 }
 
+/* 提示文字 */
 .hint {
   font-size: 24rpx;
   color: #CCCCCC;
+  text-align: center;
+}
+
+/* 释义 - 主色调 */
+.meaning {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #4A90D9;
+  margin-bottom: 30rpx;
+  text-align: center;
+}
+
+/* 单词小字 */
+.word-small {
+  font-size: 32rpx;
+  font-weight: normal;
+  color: #666666;
+  text-align: center;
+}
+
+/* 操作按钮 */
+.action-buttons {
+  display: flex;
+  gap: 30rpx;
+  width: 90%;
+}
+
+.action-buttons button {
+  flex: 1;
+  height: 90rpx;
+  border-radius: 45rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-fail {
+  background: #FFF3E0;
+  color: #FF9800;
+}
+
+.btn-next {
+  background: #E3F2FD;
+  color: #2196F3;
+}
+
+.btn-pass {
+  background: #E8F5E9;
+  color: #4CAF50;
 }
 
 /* 发音按钮 */
@@ -104,49 +163,6 @@
   font-weight: 500;
 }
 
-.meaning {
-  font-size: 48rpx;
-  font-weight: bold;
-  color: #4A90D9;
-  margin-bottom: 30rpx;
-}
-
-.word-small {
-  font-size: 32rpx;
-  color: #666;
-}
-
-/* 操作按钮 */
-.action-buttons {
-  display: flex;
-  gap: 30rpx;
-  width: 90%;
-}
-
-.btn-fail, .btn-next, .btn-pass {
-  flex: 1;
-  height: 90rpx;
-  line-height: 90rpx;
-  border-radius: 45rpx;
-  font-size: 30rpx;
-  border: none;
-}
-
-.btn-fail {
-  background: #FFEBEE;
-  color: #F44336;
-}
-
-.btn-next {
-  background: #E3F2FD;
-  color: #2196F3;
-}
-
-.btn-pass {
-  background: #E8F5E9;
-  color: #4CAF50;
-}
-
 /* 学习完成 */
 .complete-section {
   display: flex;
@@ -163,13 +179,14 @@
 .complete-text {
   font-size: 40rpx;
   font-weight: bold;
-  color: #333;
+  color: #333333;
   margin-bottom: 20rpx;
 }
 
 .complete-sub {
   font-size: 28rpx;
-  color: #999;
+  font-weight: normal;
+  color: #999999;
   margin-bottom: 60rpx;
 }
 
@@ -177,9 +194,11 @@
   width: 300rpx;
   height: 80rpx;
   line-height: 80rpx;
-  background: #4A90D9;
+  background: linear-gradient(135deg, #4A90D9, #67B26F);
   color: #FFFFFF;
   font-size: 28rpx;
+  font-weight: 500;
   border-radius: 40rpx;
   border: none;
+  box-shadow: 0 4rpx 15rpx rgba(74, 144, 217, 0.3);
 }

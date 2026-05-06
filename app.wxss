@@ -2,4 +2,81 @@
 page {
   background: #FFFFFF;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #333333;
+  font-size: 28rpx;
+}
+
+/* 全局文字样式 */
+.text-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333333;
+  text-align: left;
+}
+
+.text-subtitle {
+  font-size: 28rpx;
+  font-weight: normal;
+  color: #999999;
+  text-align: left;
+}
+
+.text-time {
+  font-size: 22rpx;
+  color: #CCCCCC;
+}
+
+.text-status {
+  font-size: 24rpx;
+  color: #FF9800;
+}
+
+.text-status-done {
+  font-size: 24rpx;
+  color: #4CAF50;
+}
+
+/* 全局按钮样式 */
+.btn-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16rpx 32rpx;
+  background: #F5F5F5;
+  border-radius: 16rpx;
+  border: none;
+}
+
+.btn-action-text {
+  font-size: 26rpx;
+  color: #4A90D9;
+  font-weight: 500;
+}
+
+.btn-action-arrow {
+  font-size: 24rpx;
+  color: #4A90D9;
+  margin-left: 8rpx;
+}
+
+/* 主色调按钮 */
+.btn-primary {
+  background: linear-gradient(135deg, #4A90D9, #67B26F);
+  color: #FFFFFF;
+  border-radius: 50rpx;
+  padding: 20rpx 40rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+  border: none;
+  box-shadow: 0 4rpx 15rpx rgba(74, 144, 217, 0.3);
+}
+
+/* 次要按钮 */
+.btn-secondary {
+  background: #F5F5F5;
+  color: #666666;
+  border-radius: 16rpx;
+  padding: 16rpx 32rpx;
+  font-size: 26rpx;
+  border: 1rpx solid #E0E0E0;
 }

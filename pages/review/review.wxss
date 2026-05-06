@@ -12,14 +12,15 @@
 .title {
   font-size: 36rpx;
   font-weight: bold;
-  color: #333;
+  color: #333333;
   display: block;
   margin-bottom: 10rpx;
 }
 
 .subtitle {
-  font-size: 24rpx;
-  color: #999;
+  font-size: 28rpx;
+  font-weight: normal;
+  color: #999999;
 }
 
 .review-list {
@@ -32,6 +33,7 @@
   margin-bottom: 20rpx;
   overflow: hidden;
   box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+  border: 1rpx solid #F0F0F0;
 }
 
 .card-front, .card-back {
@@ -57,13 +59,20 @@
 .word {
   font-size: 48rpx;
   font-weight: bold;
-  color: #333;
+  color: #333333;
   margin-bottom: 15rpx;
 }
 
 .phonetic {
-  font-size: 26rpx;
-  color: #999;
+  font-size: 28rpx;
+  font-weight: normal;
+  color: #999999;
+}
+
+.meaning {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #4A90D9;
 }
 
 /* 发音按钮 */
@@ -83,12 +92,6 @@
   font-size: 32rpx;
 }
 
-.meaning {
-  font-size: 36rpx;
-  font-weight: bold;
-  color: #4A90D9;
-}
-
 .empty-state {
   display: flex;
   flex-direction: column;
@@ -104,13 +107,14 @@
 .empty-text {
   font-size: 32rpx;
   font-weight: bold;
-  color: #333;
+  color: #333333;
   margin-bottom: 15rpx;
 }
 
 .empty-sub {
-  font-size: 26rpx;
-  color: #999;
+  font-size: 28rpx;
+  font-weight: normal;
+  color: #999999;
   margin-bottom: 50rpx;
 }
 
@@ -118,9 +122,11 @@
   width: 300rpx;
   height: 80rpx;
   line-height: 80rpx;
-  background: #4A90D9;
+  background: linear-gradient(135deg, #4A90D9, #67B26F);
   color: #FFFFFF;
   font-size: 28rpx;
+  font-weight: 500;
   border-radius: 40rpx;
   border: none;
+  box-shadow: 0 4rpx 15rpx rgba(74, 144, 217, 0.3);
 }

@@ -12,7 +12,7 @@
 .mode-title {
   font-size: 36rpx;
   font-weight: bold;
-  color: #333;
+  color: #333333;
   display: block;
   text-align: center;
   margin-bottom: 50rpx;
@@ -33,6 +33,7 @@
   flex-direction: column;
   align-items: center;
   box-shadow: 0 2rpx 15rpx rgba(0, 0, 0, 0.05);
+  border: 1rpx solid #F0F0F0;
 }
 
 .mode-card.full {
@@ -47,13 +48,14 @@
 .mode-name {
   font-size: 28rpx;
   font-weight: bold;
-  color: #333;
+  color: #333333;
   margin-bottom: 10rpx;
 }
 
 .mode-desc {
   font-size: 22rpx;
-  color: #999;
+  font-weight: normal;
+  color: #999999;
   text-align: center;
 }
 
@@ -68,7 +70,8 @@
 
 .progress-count {
   font-size: 26rpx;
-  color: #666;
+  font-weight: normal;
+  color: #666666;
   display: block;
   text-align: center;
   margin-bottom: 15rpx;
@@ -82,7 +85,7 @@
 
 .progress-inner {
   height: 100%;
-  background: #4A90D9;
+  background: linear-gradient(90deg, #4A90D9, #67B26F);
   border-radius: 4rpx;
   transition: width 0.3s ease;
 }
@@ -93,11 +96,13 @@
   border-radius: 20rpx;
   text-align: center;
   margin-bottom: 40rpx;
+  border: 1rpx solid #F0F0F0;
 }
 
 .question-type {
   font-size: 24rpx;
-  color: #999;
+  font-weight: normal;
+  color: #999999;
   display: block;
   margin-bottom: 20rpx;
 }
@@ -105,13 +110,14 @@
 .question-word {
   font-size: 56rpx;
   font-weight: bold;
-  color: #333;
+  color: #333333;
   display: block;
   margin-bottom: 15rpx;
 }
 
 .question-hint {
   font-size: 24rpx;
+  font-weight: normal;
   color: #CCCCCC;
 }
 
@@ -126,7 +132,8 @@
   padding: 30rpx;
   border-radius: 15rpx;
   font-size: 28rpx;
-  color: #333;
+  font-weight: normal;
+  color: #333333;
   text-align: left;
   border: 2rpx solid #E0E0E0;
 }
@@ -155,15 +162,19 @@
   border-radius: 45rpx;
   padding: 0 30rpx;
   font-size: 28rpx;
+  border: 1rpx solid #E0E0E0;
 }
 
 .submit-btn {
   width: 180rpx;
   height: 90rpx;
-  background: #4A90D9;
+  background: linear-gradient(135deg, #4A90D9, #67B26F);
   color: #FFFFFF;
   border-radius: 45rpx;
   font-size: 28rpx;
+  font-weight: 500;
+  border: none;
+  box-shadow: 0 4rpx 15rpx rgba(74, 144, 217, 0.3);
 }
 
 .feedback {
@@ -181,12 +192,13 @@
 .feedback-text {
   font-size: 32rpx;
   font-weight: bold;
-  color: #333;
+  color: #333333;
   margin-bottom: 15rpx;
 }
 
 .feedback-answer {
   font-size: 26rpx;
+  font-weight: normal;
   color: #F44336;
   margin-bottom: 30rpx;
 }
@@ -194,10 +206,13 @@
 .next-btn {
   width: 300rpx;
   height: 80rpx;
-  background: #4A90D9;
+  background: linear-gradient(135deg, #4A90D9, #67B26F);
   color: #FFFFFF;
   border-radius: 40rpx;
   font-size: 28rpx;
+  font-weight: 500;
+  border: none;
+  box-shadow: 0 4rpx 15rpx rgba(74, 144, 217, 0.3);
 }
 
 /* 测试完成 */
@@ -216,12 +231,13 @@
 .result-score {
   font-size: 72rpx;
   font-weight: bold;
-  color: #333;
+  color: #333333;
   margin-bottom: 15rpx;
 }
 
 .result-percent {
   font-size: 32rpx;
+  font-weight: normal;
   color: #4A90D9;
   margin-bottom: 60rpx;
 }
@@ -237,14 +253,18 @@
   line-height: 80rpx;
   border-radius: 40rpx;
   font-size: 28rpx;
+  font-weight: 500;
 }
 
 .btn-retry {
   background: #E3F2FD;
   color: #2196F3;
+  border: none;
 }
 
 .btn-back {
-  background: #4A90D9;
+  background: linear-gradient(135deg, #4A90D9, #67B26F);
   color: #FFFFFF;
+  border: none;
+  box-shadow: 0 4rpx 15rpx rgba(74, 144, 217, 0.3);
 }

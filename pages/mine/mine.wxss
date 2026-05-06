@@ -21,6 +21,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 20rpx;
+  box-shadow: 0 4rpx 20rpx rgba(74, 144, 217, 0.3);
 }
 
 .avatar-icon {
@@ -30,13 +31,14 @@
 .username {
   font-size: 36rpx;
   font-weight: bold;
-  color: #333;
+  color: #333333;
   margin-bottom: 10rpx;
 }
 
 .grade {
   font-size: 26rpx;
-  color: #999;
+  font-weight: normal;
+  color: #999999;
 }
 
 /* 目标卡片 */
@@ -45,6 +47,7 @@
   padding: 30rpx;
   border-radius: 20rpx;
   margin-bottom: 30rpx;
+  border: 1rpx solid #F0F0F0;
 }
 
 .goal-header {
@@ -57,11 +60,12 @@
 .goal-title {
   font-size: 28rpx;
   font-weight: bold;
-  color: #333;
+  color: #333333;
 }
 
 .goal-edit {
   font-size: 24rpx;
+  font-weight: normal;
   color: #4A90D9;
 }
 
@@ -72,7 +76,8 @@
 
 .goal-text {
   font-size: 26rpx;
-  color: #666;
+  font-weight: normal;
+  color: #666666;
   margin-bottom: 20rpx;
 }
 
@@ -107,6 +112,7 @@
   border-radius: 20rpx;
   margin-bottom: 30rpx;
   overflow: hidden;
+  border: 1rpx solid #F0F0F0;
 }
 
 .settings-item {
@@ -128,12 +134,14 @@
 .settings-label {
   flex: 1;
   font-size: 28rpx;
-  color: #333;
+  font-weight: normal;
+  color: #333333;
 }
 
 .settings-value {
   font-size: 24rpx;
-  color: #999;
+  font-weight: normal;
+  color: #999999;
   margin-right: 15rpx;
 }
 
@@ -147,6 +155,7 @@
   background: #FFFFFF;
   border-radius: 20rpx;
   margin-bottom: 30rpx;
+  border: 1rpx solid #F0F0F0;
 }
 
 .action-item {
@@ -167,7 +176,8 @@
 
 .action-label {
   font-size: 28rpx;
-  color: #333;
+  font-weight: normal;
+  color: #333333;
 }
 
 /* 页脚 */
@@ -180,6 +190,7 @@
 
 .footer-text {
   font-size: 22rpx;
+  font-weight: normal;
   color: #CCCCCC;
   margin-bottom: 8rpx;
 }
