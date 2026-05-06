@@ -1,5 +1,8 @@
 const vocabulary = require('../../data/vocabulary.js');
 
+// 本地自定义词汇存储
+let customWords = [];
+
 Page({
   data: {
     letters: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split(''),
@@ -9,7 +12,19 @@ Page({
   },
 
   onLoad() {
-    this.processWords(vocabulary);
+    this.loadCustomWords();
+  },
+
+  loadCustomWords() {
+    try {
+      const saved = wx.getStorageSync('customWords');
+      if (saved) {
+        customWords = saved;
+      }
+    } catch (e) {
+      console.log('Failed to load custom words:', e);
+    }
+    this.processWords([...vocabulary, ...customWords]);
   },
 
   processWords(words) {
@@ -40,14 +55,15 @@ Page({
       searchKey: key
     });
 
+    const allWords = [...vocabulary, ...customWords];
     if (key) {
-      const filtered = vocabulary.filter(w => 
+      const filtered = allWords.filter(w => 
         w.word.toLowerCase().includes(key) || 
         w.meaning.includes(key)
       );
       this.processWords(filtered);
     } else {
-      this.processWords(vocabulary);
+      this.processWords(allWords);
     }
   },
 
@@ -87,30 +103,56 @@ Page({
 
   addWord() {
     wx.showModal({
-      title: '追加单词',
+      title: '添加单词',
       editable: true,
       placeholderText: '输入单词',
       success: (res) => {
         if (res.confirm && res.content) {
           const newWord = res.content.trim().toLowerCase();
-          if (newWord) {
-            // 获取现有单词数作为新ID
+          if (newWord && !this.wordExists(newWord)) {
             const maxId = vocabulary.length > 0 ? Math.max(...vocabulary.map(w => w.id)) : 0;
+            const customMaxId = customWords.length > 0 ? Math.max(...customWords.map(w => w.id)) : 0;
             const newEntry = {
-              id: maxId + 1,
+              id: Math.max(maxId, customMaxId) + 1,
               word: newWord,
               phonetic: `/${newWord}/`,
               meaning: '自定义单词',
               level: 1,
               isCustom: true
             };
+            
+            customWords.push(newEntry);
+            wx.setStorageSync('customWords', customWords);
+            
+            // 刷新列表
+            const allWords = [...vocabulary, ...customWords];
+            if (this.data.searchKey) {
+              const filtered = allWords.filter(w => 
+                w.word.toLowerCase().includes(this.data.searchKey) || 
+                w.meaning.includes(this.data.searchKey)
+              );
+              this.processWords(filtered);
+            } else {
+              this.processWords(allWords);
+            }
+            
             wx.showToast({
-              title: '单词已添加',
+              title: '添加成功',
               icon: 'success'
+            });
+          } else if (this.wordExists(newWord)) {
+            wx.showToast({
+              title: '单词已存在',
+              icon: 'none'
             });
           }
         }
       }
     });
+  },
+
+  wordExists(word) {
+    const allWords = [...vocabulary, ...customWords];
+    return allWords.some(w => w.word.toLowerCase() === word.toLowerCase());
   }
 });
