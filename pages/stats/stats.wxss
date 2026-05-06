@@ -1,6 +1,6 @@
 .container {
   min-height: 100vh;
-  background: #F5F5F5;
+  background: #FFFFFF;
   padding: 20rpx;
 }
 
@@ -65,7 +65,7 @@
 .circle-inner {
   width: 240rpx;
   height: 240rpx;
-  background: #F5F5F5;
+  background: #FFFFFF;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
