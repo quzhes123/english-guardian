@@ -81,6 +81,29 @@
   color: #CCCCCC;
 }
 
+/* 发音按钮 */
+.audio-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10rpx;
+  padding: 20rpx 40rpx;
+  background: linear-gradient(135deg, #4A90D9, #67B26F);
+  border-radius: 50rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 4rpx 15rpx rgba(74, 144, 217, 0.3);
+}
+
+.audio-icon {
+  font-size: 36rpx;
+}
+
+.audio-text {
+  font-size: 26rpx;
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
 .meaning {
   font-size: 48rpx;
   font-weight: bold;

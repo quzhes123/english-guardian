@@ -37,7 +37,12 @@
             <text class="word-text">{{item.word}}</text>
             <text class="word-phonetic">{{item.phonetic}}</text>
           </view>
-          <text class="word-meaning">{{item.meaning}}</text>
+          <view class="word-actions">
+            <view class="audio-btn-small" catchtap="playAudio" data-word="{{item.word}}">
+              <text class="audio-icon-small">🔊</text>
+            </view>
+            <text class="word-meaning">{{item.meaning}}</text>
+          </view>
         </view>
       </view>
     </view>

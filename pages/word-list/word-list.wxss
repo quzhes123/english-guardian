@@ -97,3 +97,26 @@
   max-width: 200rpx;
   text-align: right;
 }
+
+/* 单词操作区域 */
+.word-actions {
+  display: flex;
+  align-items: center;
+  gap: 15rpx;
+}
+
+/* 小发音按钮 */
+.audio-btn-small {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50rpx;
+  height: 50rpx;
+  background: linear-gradient(135deg, #4A90D9, #67B26F);
+  border-radius: 50%;
+  box-shadow: 0 2rpx 8rpx rgba(74, 144, 217, 0.3);
+}
+
+.audio-icon-small {
+  font-size: 24rpx;
+}

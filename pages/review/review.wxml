@@ -13,6 +13,9 @@
       <view class="card-front">
         <text class="word">{{item.word}}</text>
         <text class="phonetic">{{item.phonetic}}</text>
+        <view class="audio-btn" catchtap="playAudio" data-word="{{item.word}}">
+          <text class="audio-icon">🔊</text>
+        </view>
       </view>
       <view class="card-back">
         <text class="meaning">{{item.meaning}}</text>

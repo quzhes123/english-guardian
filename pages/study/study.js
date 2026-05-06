@@ -84,5 +84,26 @@ Page({
 
   goBack() {
     wx.navigateBack();
+  },
+
+  playAudio() {
+    const word = this.data.currentWord.word;
+    const audioUrl = `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(word)}&type=1`;
+    
+    const audioContext = wx.createInnerAudioContext();
+    audioContext.src = audioUrl;
+    audioContext.play();
+    
+    audioContext.onPlay(() => {
+      console.log('正在播放:', word);
+    });
+    
+    audioContext.onError((err) => {
+      console.error('播放失败:', err);
+      wx.showToast({
+        title: '播放失败',
+        icon: 'none'
+      });
+    });
   }
 });

@@ -70,5 +70,18 @@ Page({
       showCancel: false,
       confirmText: '知道了'
     });
+  },
+
+  playAudio(e) {
+    const word = e.currentTarget.dataset.word;
+    const audioUrl = `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(word)}&type=1`;
+    
+    const audioContext = wx.createInnerAudioContext();
+    audioContext.src = audioUrl;
+    audioContext.play();
+    
+    audioContext.onError((err) => {
+      wx.showToast({ title: '播放失败', icon: 'none' });
+    });
   }
 });
