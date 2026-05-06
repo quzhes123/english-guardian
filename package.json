@@ -10,6 +10,8 @@
   "keywords": ["wechat", "miniprogram", "english", "study", "middle-school"],
   "author": "",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "miniprogram-ci": "^2.1.34"
+  },
   "devDependencies": {}
 }
