@@ -1,0 +1,79 @@
+<view class="container">
+  <!-- 顶部欢迎区域 -->
+  <view class="header">
+    <view class="greeting">
+      <text class="greeting-text">{{greeting}}，同学！</text>
+      <text class="date">{{currentDate}}</text>
+    </view>
+    <view class="streak-badge" wx:if="{{consecutiveDays > 0}}">
+      <text class="streak-icon">🔥</text>
+      <text class="streak-count">{{consecutiveDays}}天</text>
+    </view>
+  </view>
+
+  <!-- 打卡区域 -->
+  <view class="checkin-section">
+    <view class="checkin-card {{todayCheckIn ? 'checked' : ''}}">
+      <view class="checkin-info">
+        <text class="checkin-title">{{todayCheckIn ? '✅ 今日已打卡' : '📝 今日打卡'}}</text>
+        <text class="checkin-subtitle">{{todayCheckIn ? '太棒了！继续保持' : '点击打卡开始今日学习'}}</text>
+      </view>
+      <button class="checkin-btn {{todayCheckIn ? 'disabled' : ''}}" 
+              bindtap="onCheckIn" 
+              disabled="{{todayCheckIn}}">
+        {{todayCheckIn ? '已打卡' : '打卡'}}
+      </button>
+    </view>
+  </view>
+
+  <!-- 今日任务区域 -->
+  <view class="task-section">
+    <view class="section-title">
+      <text>📚 今日任务</text>
+      <text class="progress-text">{{taskProgress}}</text>
+    </view>
+    
+    <view class="task-cards">
+      <view class="task-card review" bindtap="goToReview">
+        <view class="task-icon">🔄</view>
+        <view class="task-info">
+          <text class="task-name">复习</text>
+          <text class="task-count">{{reviewCount}}个词</text>
+        </view>
+        <view class="task-arrow">›</view>
+      </view>
+      
+      <view class="task-card new" bindtap="goToStudy">
+        <view class="task-icon">📖</view>
+        <view class="task-info">
+          <text class="task-name">学习新词</text>
+          <text class="task-count">{{newWordCount}}个词</text>
+        </view>
+        <view class="task-arrow">›</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 快捷入口 -->
+  <view class="quick-section">
+    <view class="section-title">🚀 快捷入口</view>
+    <view class="quick-grid">
+      <view class="quick-item" bindtap="goToWordList">
+        <view class="quick-icon">📋</view>
+        <text class="quick-text">词汇表</text>
+      </view>
+      <view class="quick-item" bindtap="goToTest">
+        <view class="quick-icon">✏️</view>
+        <text class="quick-text">测试</text>
+      </view>
+      <view class="quick-item" bindtap="goToStats">
+        <view class="quick-icon">📊</view>
+        <text class="quick-text">统计</text>
+      </view>
+      <view class="quick-item" bindtap="goToMine">
+        <view class="quick-icon">👤</view>
+        <text class="quick-text">我的</text>
+      </view>
+    </view>
+  </view>
+</view>

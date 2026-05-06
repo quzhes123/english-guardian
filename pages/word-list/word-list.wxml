@@ -1,0 +1,45 @@
+<view class="container">
+  <!-- 搜索框 -->
+  <view class="search-bar">
+    <input class="search-input" 
+           placeholder="搜索单词..." 
+           bindinput="onSearch"
+           value="{{searchKey}}"/>
+  </view>
+
+  <!-- 字母导航 -->
+  <view class="letter-nav">
+    <text class="letter-item {{item === currentLetter ? 'active' : ''}}"
+          wx:for="{{letters}}"
+          wx:key="item"
+          bindtap="jumpToLetter"
+          data-letter="{{item}}">
+      {{item}}
+    </text>
+  </view>
+
+  <!-- 单词列表 -->
+  <scroll-view class="word-scroll" scroll-y bindscroll="onScroll">
+    <view class="word-list">
+      <view class="letter-section" 
+            wx:for="{{filteredWords}}" 
+            wx:for-item="group"
+            wx:key="letter">
+        <view class="letter-header" id="letter-{{group.letter}}">
+          {{group.letter}}
+        </view>
+        <view class="word-item"
+              wx:for="{{group.words}}"
+              wx:key="id"
+              bindtap="showWordDetail"
+              data-word="{{item}}">
+          <view class="word-main">
+            <text class="word-text">{{item.word}}</text>
+            <text class="word-phonetic">{{item.phonetic}}</text>
+          </view>
+          <text class="word-meaning">{{item.meaning}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

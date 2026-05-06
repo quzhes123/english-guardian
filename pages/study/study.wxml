@@ -1,0 +1,35 @@
+<view class="container">
+  <!-- 进度条 -->
+  <view class="progress-bar">
+    <view class="progress-inner" style="width: {{progressPercent}}%"></view>
+  </view>
+  <view class="progress-text">{{currentIndex + 1}} / {{totalWords}}</view>
+
+  <!-- 单词卡片 -->
+  <view class="word-card" bindtap="flipCard">
+    <view class="card-front {{isFlipped ? 'hidden' : ''}}">
+      <text class="word">{{currentWord.word}}</text>
+      <text class="phonetic">{{currentWord.phonetic}}</text>
+      <text class="hint">点击查看中文释义</text>
+    </view>
+    <view class="card-back {{isFlipped ? '' : 'hidden'}}">
+      <text class="meaning">{{currentWord.meaning}}</text>
+      <text class="word-small">{{currentWord.word}}</text>
+    </view>
+  </view>
+
+  <!-- 操作按钮 -->
+  <view class="action-buttons">
+    <button class="btn-fail" bindtap="onFail">没记住</button>
+    <button class="btn-next" bindtap="onNext">下一个</button>
+    <button class="btn-pass" bindtap="onPass">记住了</button>
+  </view>
+
+  <!-- 学习完成 -->
+  <view class="complete-section" wx:if="{{isComplete}}">
+    <text class="complete-icon">🎉</text>
+    <text class="complete-text">今日新词学习完成！</text>
+    <text class="complete-sub">太棒了，记得明天继续学习哦</text>
+    <button class="btn-back" bindtap="goBack">返回首页</button>
+  </view>
+</view>

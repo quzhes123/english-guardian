@@ -1,0 +1,81 @@
+<view class="container">
+  <!-- 题目类型选择 -->
+  <view class="mode-select" wx:if="{{!testStarted}}">
+    <text class="mode-title">选择测试模式</text>
+    <view class="mode-cards">
+      <view class="mode-card" bindtap="startTest" data-mode="word2meaning">
+        <text class="mode-icon">📝</text>
+        <text class="mode-name">看英文选中文</text>
+        <text class="mode-desc">显示单词，选择正确的中文释义</text>
+      </view>
+      <view class="mode-card" bindtap="startTest" data-mode="meaning2word">
+        <text class="mode-icon">✍️</text>
+        <text class="mode-name">看中文写英文</text>
+        <text class="mode-desc">显示中文，默写英文单词</text>
+      </view>
+    </view>
+    <view class="mode-card full" bindtap="startTest" data-mode="mixed">
+      <text class="mode-icon">🎯</text>
+      <text class="mode-name">综合测试</text>
+      <text class="mode-desc">随机混合测试，检验全面掌握</text>
+    </view>
+  </view>
+
+  <!-- 测试进行中 -->
+  <view class="test-section" wx:if="{{testStarted && !testFinished}}">
+    <!-- 进度 -->
+    <view class="test-progress">
+      <text class="progress-count">{{currentIndex + 1}} / {{totalCount}}</text>
+      <view class="progress-bar">
+        <view class="progress-inner" style="width: {{(currentIndex / totalCount) * 100}}%"></view>
+      </view>
+    </view>
+
+    <!-- 题目 -->
+    <view class="question-card">
+      <text class="question-type">{{testMode === 'word2meaning' ? '选择中文释义' : '默写英文单词'}}</text>
+      <text class="question-word">{{currentQuestion.word || currentQuestion.meaning}}</text>
+      <text class="question-hint" wx:if="{{testMode === 'meaning2word'}}">请在下方输入英文单词</text>
+    </view>
+
+    <!-- 选择题选项 -->
+    <view class="options" wx:if="{{testMode === 'word2meaning'}}">
+      <button class="option-btn {{selectedOption === index ? (option === currentQuestion.correctAnswer ? 'correct' : 'wrong') : ''}}"
+              wx:for="{{currentQuestion.options}}"
+              wx:key="index"
+              bindtap="selectOption"
+              data-index="{{index}}"
+              disabled="{{answered}}">
+        {{option}}
+      </button>
+    </view>
+
+    <!-- 填空题输入 -->
+    <view class="input-section" wx:if="{{testMode === 'meaning2word' && !answered}}">
+      <input class="answer-input" 
+             placeholder="输入英文单词..." 
+             bindinput="onAnswerInput"
+             value="{{userAnswer}}"/>
+      <button class="submit-btn" bindtap="submitAnswer">确定</button>
+    </view>
+
+    <!-- 答题结果反馈 -->
+    <view class="feedback" wx:if="{{answered}}">
+      <text class="feedback-icon {{isCorrect ? '✓' : '✗'}}">{{isCorrect ? '🎉' : '😢'}}</text>
+      <text class="feedback-text">{{isCorrect ? '正确！' : '错误'}}</text>
+      <text class="feedback-answer" wx:if="{{!isCorrect}}">正确答案: {{currentQuestion.correctAnswer}}</text>
+      <button class="next-btn" bindtap="nextQuestion">下一题</button>
+    </view>
+  </view>
+
+  <!-- 测试完成 -->
+  <view class="result-section" wx:if="{{testFinished}}">
+    <text class="result-icon">🏆</text>
+    <text class="result-score">{{correctCount}} / {{totalCount}}</text>
+    <text class="result-percent">{{Math.round((correctCount / totalCount) * 100)}}% 正确率</text>
+    <view class="result-btns">
+      <button class="btn-retry" bindtap="retryTest">再测一次</button>
+      <button class="btn-back" bindtap="goBackHome">返回首页</button>
+    </view>
+  </view>
+</view>

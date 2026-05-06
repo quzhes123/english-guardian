@@ -1,0 +1,71 @@
+<view class="container">
+  <view class="stats-header">
+    <text class="title">📊 学习统计</text>
+  </view>
+
+  <!-- 总体进度 -->
+  <view class="overview-cards">
+    <view class="overview-card">
+      <text class="overview-num">{{consecutiveDays}}</text>
+      <text class="overview-label">连续打卡天数</text>
+    </view>
+    <view class="overview-card">
+      <text class="overview-num">{{totalWordsLearned}}</text>
+      <text class="overview-label">已学单词数</text>
+    </view>
+    <view class="overview-card">
+      <text class="overview-num">{{totalDays}}</text>
+      <text class="overview-label">累计学习天数</text>
+    </view>
+  </view>
+
+  <!-- 学习进度圆环 -->
+  <view class="progress-circle">
+    <view class="circle-bg"></view>
+    <view class="circle-inner">
+      <text class="circle-percent">{{progressPercent}}%</text>
+      <text class="circle-label">整体进度</text>
+    </view>
+  </view>
+
+  <!-- 学习日历 -->
+  <view class="calendar-section">
+    <text class="section-title">📅 {{currentMonth}} 学习日历</text>
+    <view class="calendar-grid">
+      <view class="weekday" wx:for="{{weekdays}}" wx:key="index">{{item}}</view>
+      <view class="day {{item.status}}"
+            wx:for="{{calendarDays}}"
+            wx:key="index">
+        {{item.day}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 掌握度分布 -->
+  <view class="mastery-section">
+    <text class="section-title">📈 单词掌握度</text>
+    <view class="mastery-bars">
+      <view class="mastery-item">
+        <text class="mastery-label">陌生</text>
+        <view class="mastery-bar-bg">
+          <view class="mastery-bar-fill unfamiliar" style="width: {{unfamiliarPercent}}%"></view>
+        </view>
+        <text class="mastery-count">{{unfamiliarCount}}</text>
+      </view>
+      <view class="mastery-item">
+        <text class="mastery-label">认识</text>
+        <view class="mastery-bar-bg">
+          <view class="mastery-bar-fill familiar" style="width: {{familiarPercent}}%"></view>
+        </view>
+        <text class="mastery-count">{{familiarCount}}</text>
+      </view>
+      <view class="mastery-item">
+        <text class="mastery-label">掌握</text>
+        <view class="mastery-bar-bg">
+          <view class="mastery-bar-fill mastered" style="width: {{masteredPercent}}%"></view>
+        </view>
+        <text class="mastery-count">{{masteredCount}}</text>
+      </view>
+    </view>
+  </view>
+</view>

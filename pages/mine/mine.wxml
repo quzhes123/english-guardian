@@ -1,0 +1,66 @@
+<view class="container">
+  <!-- 用户信息 -->
+  <view class="profile-section">
+    <view class="avatar">
+      <text class="avatar-icon">🦞</text>
+    </view>
+    <text class="username">初中生</text>
+    <text class="grade">初一 · 天津</text>
+  </view>
+
+  <!-- 学习目标 -->
+  <view class="goal-card">
+    <view class="goal-header">
+      <text class="goal-title">🎯 中考目标</text>
+      <text class="goal-edit" bindtap="editGoal">编辑</text>
+    </view>
+    <view class="goal-content">
+      <text class="goal-text">{{goalText}}</text>
+      <view class="goal-progress">
+        <view class="goal-bar">
+          <view class="goal-fill" style="width: {{goalProgress}}%"></view>
+        </view>
+        <text class="goal-percent">{{goalProgress}}%</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 设置列表 -->
+  <view class="settings-list">
+    <view class="settings-item" bindtap="showSetting" data-key="daily">
+      <text class="settings-icon">📝</text>
+      <text class="settings-label">每日学习目标</text>
+      <text class="settings-value">{{dailyTarget}}个词</text>
+      <text class="settings-arrow">›</text>
+    </view>
+    <view class="settings-item" bindtap="showSetting" data-key="reminder">
+      <text class="settings-icon">🔔</text>
+      <text class="settings-label">学习提醒</text>
+      <text class="settings-value">{{reminderEnabled ? '已开启' : '已关闭'}}</text>
+      <text class="settings-arrow">›</text>
+    </view>
+    <view class="settings-item" bindtap="showSetting" data-key="sound">
+      <text class="settings-icon">🔊</text>
+      <text class="settings-label">发音朗读</text>
+      <text class="settings-value">{{soundEnabled ? '已开启' : '已关闭'}}</text>
+      <text class="settings-arrow">›</text>
+    </view>
+  </view>
+
+  <!-- 功能按钮 -->
+  <view class="action-list">
+    <view class="action-item" bindtap="exportData">
+      <text class="action-icon">📤</text>
+      <text class="action-label">导出学习记录</text>
+    </view>
+    <view class="action-item" bindtap="showAbout">
+      <text class="action-icon">ℹ️</text>
+      <text class="action-label">关于小程序</text>
+    </view>
+  </view>
+
+  <view class="footer">
+    <text class="footer-text">英语守护者 v1.0</text>
+    <text class="footer-text">为中考英语加油 💪</text>
+  </view>
+</view>

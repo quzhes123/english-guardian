@@ -1,0 +1,109 @@
+.container {
+  min-height: 100vh;
+  background: #F5F5F5;
+  padding: 20rpx;
+}
+
+.header {
+  padding: 30rpx 20rpx;
+  text-align: center;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.subtitle {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.review-list {
+  padding: 20rpx;
+}
+
+.review-item {
+  background: #FFFFFF;
+  border-radius: 20rpx;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.card-front, .card-back {
+  padding: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-back {
+  display: none;
+  background: #E3F2FD;
+}
+
+.review-item.flipped .card-front {
+  display: none;
+}
+
+.review-item.flipped .card-back {
+  display: flex;
+}
+
+.word {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15rpx;
+}
+
+.phonetic {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.meaning {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #4A90D9;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100rpx 0;
+}
+
+.empty-icon {
+  font-size: 100rpx;
+  margin-bottom: 30rpx;
+}
+
+.empty-text {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15rpx;
+}
+
+.empty-sub {
+  font-size: 26rpx;
+  color: #999;
+  margin-bottom: 50rpx;
+}
+
+.btn-study {
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #4A90D9;
+  color: #FFFFFF;
+  font-size: 28rpx;
+  border-radius: 40rpx;
+  border: none;
+}

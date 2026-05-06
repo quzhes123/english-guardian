@@ -1,0 +1,185 @@
+.container {
+  min-height: 100vh;
+  background: #F5F5F5;
+  padding: 20rpx;
+}
+
+/* 用户信息 */
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50rpx 0 40rpx;
+}
+
+.avatar {
+  width: 150rpx;
+  height: 150rpx;
+  background: linear-gradient(135deg, #4A90D9, #67B26F);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20rpx;
+}
+
+.avatar-icon {
+  font-size: 80rpx;
+}
+
+.username {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.grade {
+  font-size: 26rpx;
+  color: #999;
+}
+
+/* 目标卡片 */
+.goal-card {
+  background: #FFFFFF;
+  padding: 30rpx;
+  border-radius: 20rpx;
+  margin-bottom: 30rpx;
+}
+
+.goal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.goal-title {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.goal-edit {
+  font-size: 24rpx;
+  color: #4A90D9;
+}
+
+.goal-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.goal-text {
+  font-size: 26rpx;
+  color: #666;
+  margin-bottom: 20rpx;
+}
+
+.goal-progress {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+}
+
+.goal-bar {
+  flex: 1;
+  height: 12rpx;
+  background: #E0E0E0;
+  border-radius: 6rpx;
+}
+
+.goal-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4A90D9, #67B26F);
+  border-radius: 6rpx;
+}
+
+.goal-percent {
+  font-size: 24rpx;
+  color: #4A90D9;
+  font-weight: bold;
+}
+
+/* 设置列表 */
+.settings-list {
+  background: #FFFFFF;
+  border-radius: 20rpx;
+  margin-bottom: 30rpx;
+  overflow: hidden;
+}
+
+.settings-item {
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  border-bottom: 1rpx solid #F0F0F0;
+}
+
+.settings-item:last-child {
+  border-bottom: none;
+}
+
+.settings-icon {
+  font-size: 36rpx;
+  margin-right: 20rpx;
+}
+
+.settings-label {
+  flex: 1;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.settings-value {
+  font-size: 24rpx;
+  color: #999;
+  margin-right: 15rpx;
+}
+
+.settings-arrow {
+  font-size: 32rpx;
+  color: #CCCCCC;
+}
+
+/* 功能按钮 */
+.action-list {
+  background: #FFFFFF;
+  border-radius: 20rpx;
+  margin-bottom: 30rpx;
+}
+
+.action-item {
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  border-bottom: 1rpx solid #F0F0F0;
+}
+
+.action-item:last-child {
+  border-bottom: none;
+}
+
+.action-icon {
+  font-size: 36rpx;
+  margin-right: 20rpx;
+}
+
+.action-label {
+  font-size: 28rpx;
+  color: #333;
+}
+
+/* 页脚 */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40rpx 0;
+}
+
+.footer-text {
+  font-size: 22rpx;
+  color: #CCCCCC;
+  margin-bottom: 8rpx;
+}

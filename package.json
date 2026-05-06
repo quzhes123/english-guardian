@@ -1,0 +1,15 @@
+{
+  "name": "english-guardian",
+  "version": "1.0.0",
+  "description": "英语守护者 - 专为初中生打造的中考英语词汇背诵小程序",
+  "main": "app.js",
+  "scripts": {
+    "upload": "node scripts/upload.js",
+    "check": "node --check app.js && node --check pages/**/*.js"
+  },
+  "keywords": ["wechat", "miniprogram", "english", "study", "middle-school"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

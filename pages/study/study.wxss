@@ -1,0 +1,162 @@
+.container {
+  min-height: 100vh;
+  background: #F5F5F5;
+  padding: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 进度条 */
+.progress-bar {
+  width: 100%;
+  height: 12rpx;
+  background: #E0E0E0;
+  border-radius: 6rpx;
+  margin-bottom: 15rpx;
+  overflow: hidden;
+}
+
+.progress-inner {
+  height: 100%;
+  background: linear-gradient(90deg, #4A90D9, #67B26F);
+  border-radius: 6rpx;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 24rpx;
+  color: #999;
+  margin-bottom: 40rpx;
+}
+
+/* 单词卡片 */
+.word-card {
+  width: 90%;
+  height: 450rpx;
+  background: #FFFFFF;
+  border-radius: 30rpx;
+  box-shadow: 0 8rpx 40rpx rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50rpx;
+  position: relative;
+}
+
+.card-front, .card-back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+
+.card-front.hidden, .card-back.hidden {
+  display: none;
+}
+
+.word {
+  font-size: 64rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+.phonetic {
+  font-size: 28rpx;
+  color: #999;
+  margin-bottom: 40rpx;
+}
+
+.hint {
+  font-size: 24rpx;
+  color: #CCCCCC;
+}
+
+.meaning {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #4A90D9;
+  margin-bottom: 30rpx;
+}
+
+.word-small {
+  font-size: 32rpx;
+  color: #666;
+}
+
+/* 操作按钮 */
+.action-buttons {
+  display: flex;
+  gap: 30rpx;
+  width: 90%;
+}
+
+.btn-fail, .btn-next, .btn-pass {
+  flex: 1;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-radius: 45rpx;
+  font-size: 30rpx;
+  border: none;
+}
+
+.btn-fail {
+  background: #FFEBEE;
+  color: #F44336;
+}
+
+.btn-next {
+  background: #E3F2FD;
+  color: #2196F3;
+}
+
+.btn-pass {
+  background: #E8F5E9;
+  color: #4CAF50;
+}
+
+/* 学习完成 */
+.complete-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100rpx;
+}
+
+.complete-icon {
+  font-size: 120rpx;
+  margin-bottom: 30rpx;
+}
+
+.complete-text {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+.complete-sub {
+  font-size: 28rpx;
+  color: #999;
+  margin-bottom: 60rpx;
+}
+
+.btn-back {
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #4A90D9;
+  color: #FFFFFF;
+  font-size: 28rpx;
+  border-radius: 40rpx;
+  border: none;
+}

@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="header">
+    <text class="title">🔄 复习</text>
+    <text class="subtitle">点击卡片查看答案</text>
+  </view>
+
+  <view class="review-list">
+    <view class="review-item {{item.flipped ? 'flipped' : ''}}" 
+          wx:for="{{reviewWords}}" 
+          wx:key="id"
+          bindtap="flipCard"
+          data-index="{{index}}">
+      <view class="card-front">
+        <text class="word">{{item.word}}</text>
+        <text class="phonetic">{{item.phonetic}}</text>
+      </view>
+      <view class="card-back">
+        <text class="meaning">{{item.meaning}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="empty-state" wx:if="{{reviewWords.length === 0}}">
+    <text class="empty-icon">🎉</text>
+    <text class="empty-text">今日没有需要复习的单词</text>
+    <text class="empty-sub">学有余力？可以继续学习新词哦</text>
+    <button class="btn-study" bindtap="goToStudy">去学习</button>
+  </view>
+</view>

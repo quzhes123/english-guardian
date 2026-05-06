@@ -1,0 +1,208 @@
+.container {
+  min-height: 100vh;
+  background: #F5F5F5;
+  padding: 20rpx;
+}
+
+/* 顶部欢迎区域 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 20rpx;
+  background: linear-gradient(135deg, #4A90D9 0%, #67B26F 100%);
+  border-radius: 20rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 4rpx 20rpx rgba(74, 144, 217, 0.3);
+}
+
+.greeting {
+  display: flex;
+  flex-direction: column;
+}
+
+.greeting-text {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin-bottom: 10rpx;
+}
+
+.date {
+  font-size: 24rpx;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.streak-badge {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15rpx 25rpx;
+  border-radius: 30rpx;
+}
+
+.streak-icon {
+  font-size: 32rpx;
+  margin-right: 10rpx;
+}
+
+.streak-count {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+/* 打卡区域 */
+.checkin-section {
+  margin-bottom: 30rpx;
+}
+
+.checkin-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFFFFF;
+  padding: 30rpx;
+  border-radius: 20rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.checkin-card.checked {
+  background: #E8F5E9;
+}
+
+.checkin-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkin-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.checkin-subtitle {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.checkin-btn {
+  width: 160rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  background: #4A90D9;
+  color: #FFFFFF;
+  font-size: 28rpx;
+  border-radius: 35rpx;
+  border: none;
+}
+
+.checkin-btn.disabled {
+  background: #CCCCCC;
+}
+
+/* 今日任务区域 */
+.task-section {
+  margin-bottom: 30rpx;
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20rpx;
+  padding: 0 10rpx;
+}
+
+.progress-text {
+  font-size: 24rpx;
+  color: #999;
+  font-weight: normal;
+}
+
+.task-cards {
+  display: flex;
+  gap: 20rpx;
+}
+
+.task-card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  padding: 30rpx 20rpx;
+  border-radius: 20rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.task-card.review {
+  border-left: 6rpx solid #FF9800;
+}
+
+.task-card.new {
+  border-left: 6rpx solid #4A90D9;
+}
+
+.task-icon {
+  font-size: 48rpx;
+  margin-right: 20rpx;
+}
+
+.task-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-name {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8rpx;
+}
+
+.task-count {
+  font-size: 22rpx;
+  color: #999;
+}
+
+.task-arrow {
+  font-size: 40rpx;
+  color: #CCCCCC;
+}
+
+/* 快捷入口 */
+.quick-section {
+  margin-bottom: 30rpx;
+}
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20rpx;
+}
+
+.quick-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FFFFFF;
+  padding: 30rpx 10rpx;
+  border-radius: 16rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.quick-icon {
+  font-size: 48rpx;
+  margin-bottom: 15rpx;
+}
+
+.quick-text {
+  font-size: 24rpx;
+  color: #666;
+}
