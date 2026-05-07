@@ -22,6 +22,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Inject Aliyun OCR credentials
+        run: |
+          sed -i 's/\${ALIYUN_ACCESS_KEY_ID}/${{ secrets.ALIYUN_ACCESS_KEY_ID }}/g' pages/word-list/word-list.js
+          sed -i 's/\${ALIYUN_ACCESS_KEY_SECRET}/${{ secrets.ALIYUN_ACCESS_KEY_SECRET }}/g' pages/word-list/word-list.js
+
       - name: Upload to WeChat
         env:
           WX_APPID: ${{ secrets.WX_APPID }}
