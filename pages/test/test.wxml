@@ -15,7 +15,7 @@
       </view>
     </view>
     <view class="mode-card full" bindtap="startTest" data-mode="mixed">
-      <text class="mode-icon">&#x2736;</text>
+      <text class="mode-icon">测</text>
       <text class="mode-name">综合测试</text>
       <text class="mode-desc">随机混合测试，检验全面掌握</text>
     </view>
@@ -61,7 +61,7 @@
 
     <!-- 答题结果反馈 -->
     <view class="feedback" wx:if="{{answered}}">
-      <text class="feedback-icon">{{isCorrect ? '&#x2713;' : '&#x2717;'}}</text>
+      <text class="feedback-icon">{{isCorrect ? '✓' : '✗'}}</text>
       <text class="feedback-text">{{isCorrect ? '正确' : '错误'}}</text>
       <text class="feedback-answer" wx:if="{{!isCorrect}}">正确答案: {{currentQuestion.correctAnswer}}</text>
       <button class="next-btn" bindtap="nextQuestion">下一题</button>
@@ -70,7 +70,7 @@
 
   <!-- 测试完成 -->
   <view class="result-section" wx:if="{{testFinished}}">
-    <text class="result-icon">&#x2736;</text>
+    <text class="result-icon">★</text>
     <text class="result-score">{{correctCount}} / {{totalCount}}</text>
     <text class="result-percent">正确率 {{Math.round((correctCount / totalCount) * 100)}}%</text>
     <view class="result-btns">
