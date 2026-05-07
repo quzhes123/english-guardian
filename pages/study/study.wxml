@@ -21,8 +21,9 @@
     </view>
   </view>
 
-  <!-- 操作按钮 -->
+  // 操作按钮
   <view class="action-buttons">
+    <button class="btn-prev" bindtap="onPrev" wx:if="{{currentIndex > 0}}">上一个</button>
     <button class="btn-fail" bindtap="onFail">没记住</button>
     <button class="btn-next" bindtap="onNext">下一个</button>
     <button class="btn-pass" bindtap="onPass">记住了</button>

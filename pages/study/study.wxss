@@ -127,20 +127,27 @@
 
 .action-buttons {
   display: flex;
-  gap: 24rpx;
+  gap: 16rpx;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .action-buttons button {
   flex: 1;
+  min-width: 140rpx;
   height: 96rpx;
   border-radius: 20rpx;
-  font-size: 32rpx;
+  font-size: 30rpx;
   font-weight: 500;
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.btn-prev {
+  background: #F5F5F7;
+  color: #666666;
 }
 
 .btn-fail {

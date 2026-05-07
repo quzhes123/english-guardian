@@ -147,7 +147,7 @@ Page({
   },
 
   goBackHome() {
-    wx.switchTab({
+    wx.reLaunch({
       url: '/pages/index/index'
     });
   }

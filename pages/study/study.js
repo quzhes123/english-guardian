@@ -64,6 +64,18 @@ Page({
     this.moveToNext();
   },
 
+  onPrev() {
+    const prevIndex = this.data.currentIndex - 1;
+    if (prevIndex >= 0) {
+      this.setData({
+        currentIndex: prevIndex,
+        currentWord: this.data.todayNewWords[prevIndex],
+        isFlipped: false,
+        progressPercent: ((prevIndex + 1) / this.data.totalWords) * 100
+      });
+    }
+  },
+
   moveToNext() {
     const nextIndex = this.data.currentIndex + 1;
     

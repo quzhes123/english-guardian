@@ -99,7 +99,7 @@ Page({
   },
 
   goToWordList() {
-    wx.switchTab({
+    wx.reLaunch({
       url: '/pages/word-list/word-list'
     });
   },
@@ -111,13 +111,13 @@ Page({
   },
 
   goToStats() {
-    wx.switchTab({
+    wx.reLaunch({
       url: '/pages/stats/stats'
     });
   },
 
   goToMine() {
-    wx.switchTab({
+    wx.reLaunch({
       url: '/pages/mine/mine'
     });
   }
