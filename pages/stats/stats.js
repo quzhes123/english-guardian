@@ -54,7 +54,9 @@ Page({
     const total = vocabulary.length;
     const learned = Object.keys(studyData).length;
     const progress = total > 0 ? Math.round((learned / total) * 100) : 0;
-    
+
+    // 计算熟练度百分比（基于已学单词数）
+    const learnedTotal = unfamiliar + familiar + mastered;
     this.setData({
       consecutiveDays: appInstance.globalData.consecutiveDays,
       totalWordsLearned: learned,
@@ -63,9 +65,9 @@ Page({
       unfamiliarCount: unfamiliar,
       familiarCount: familiar,
       masteredCount: mastered,
-      unfamiliarPercent: total > 0 ? Math.round((unfamiliar / total) * 100) : 0,
-      familiarPercent: total > 0 ? Math.round((familiar / total) * 100) : 0,
-      masteredPercent: total > 0 ? Math.round((mastered / total) * 100) : 0
+      unfamiliarPercent: learnedTotal > 0 ? Math.round((unfamiliar / learnedTotal) * 100) : 0,
+      familiarPercent: learnedTotal > 0 ? Math.round((familiar / learnedTotal) * 100) : 0,
+      masteredPercent: learnedTotal > 0 ? Math.round((mastered / learnedTotal) * 100) : 0
     });
   },
 
