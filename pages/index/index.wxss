@@ -95,20 +95,20 @@
 .checkin-btn {
   width: 160rpx;
   height: 88rpx;
-  line-height: 88rpx;
-  text-align: center;
   background: #2177FF;
   color: #FFFFFF;
   font-size: 28rpx;
   font-weight: 500;
   border-radius: 16rpx;
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .checkin-btn.disabled {
   background: #F0F0F0;
   color: #8A8A8A;
-  text-align: center;
 }
 
 /* 今日任务区域 */
