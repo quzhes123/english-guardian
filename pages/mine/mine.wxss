@@ -1,54 +1,52 @@
 .container {
   min-height: 100vh;
   background: #F5F5F7;
-  padding: 20rpx;
+  padding: 24rpx;
   padding-bottom: calc(120rpx + env(safe-area-inset-bottom));
 }
 
-/* 用户信息 */
 .profile-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 48rpx 0 32rpx;
+  padding: 56rpx 0 36rpx;
 }
 
 .avatar {
-  width: 140rpx;
-  height: 140rpx;
+  width: 160rpx;
+  height: 160rpx;
   background: #2177FF;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20rpx;
+  margin-bottom: 24rpx;
   box-shadow: 0 4rpx 16rpx rgba(33, 119, 255, 0.25);
 }
 
 .avatar-icon {
-  font-size: 64rpx;
+  font-size: 72rpx;
   color: #FFFFFF;
 }
 
 .username {
-  font-size: 34rpx;
+  font-size: 40rpx;
   font-weight: 600;
   color: #1A1A1A;
-  margin-bottom: 8rpx;
+  margin-bottom: 10rpx;
 }
 
 .grade {
-  font-size: 24rpx;
+  font-size: 28rpx;
   font-weight: normal;
   color: #8A8A8A;
 }
 
-/* 目标卡片 */
 .goal-card {
   background: #FFFFFF;
-  padding: 28rpx;
-  border-radius: 16rpx;
-  margin-bottom: 20rpx;
+  padding: 32rpx;
+  border-radius: 20rpx;
+  margin-bottom: 24rpx;
   box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.04);
 }
 
@@ -56,17 +54,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16rpx;
+  margin-bottom: 20rpx;
 }
 
 .goal-title {
-  font-size: 28rpx;
+  font-size: 34rpx;
   font-weight: 600;
   color: #1A1A1A;
 }
 
 .goal-edit {
-  font-size: 24rpx;
+  font-size: 28rpx;
   font-weight: normal;
   color: #2177FF;
 }
@@ -77,42 +75,41 @@
 }
 
 .goal-text {
-  font-size: 24rpx;
+  font-size: 28rpx;
   font-weight: normal;
   color: #666666;
-  margin-bottom: 16rpx;
+  margin-bottom: 20rpx;
 }
 
 .goal-progress {
   display: flex;
   align-items: center;
-  gap: 16rpx;
+  gap: 20rpx;
 }
 
 .goal-bar {
   flex: 1;
-  height: 10rpx;
+  height: 12rpx;
   background: #E5E5E5;
-  border-radius: 5rpx;
+  border-radius: 6rpx;
 }
 
 .goal-fill {
   height: 100%;
   background: #2177FF;
-  border-radius: 5rpx;
+  border-radius: 6rpx;
 }
 
 .goal-percent {
-  font-size: 22rpx;
+  font-size: 26rpx;
   color: #2177FF;
   font-weight: 600;
 }
 
-/* 设置列表 */
 .settings-list {
   background: #FFFFFF;
-  border-radius: 16rpx;
-  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+  margin-bottom: 24rpx;
   overflow: hidden;
   box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.04);
 }
@@ -120,7 +117,7 @@
 .settings-item {
   display: flex;
   align-items: center;
-  padding: 28rpx;
+  padding: 32rpx;
   border-bottom: 1rpx solid #F0F0F0;
 }
 
@@ -129,37 +126,36 @@
 }
 
 .settings-icon {
-  font-size: 32rpx;
-  margin-right: 16rpx;
-  width: 40rpx;
+  font-size: 38rpx;
+  margin-right: 20rpx;
+  width: 48rpx;
   text-align: center;
 }
 
 .settings-label {
   flex: 1;
-  font-size: 28rpx;
+  font-size: 32rpx;
   font-weight: normal;
   color: #1A1A1A;
 }
 
 .settings-value {
-  font-size: 24rpx;
+  font-size: 28rpx;
   font-weight: normal;
   color: #8A8A8A;
-  margin-right: 12rpx;
+  margin-right: 14rpx;
 }
 
 .settings-arrow {
-  font-size: 28rpx;
+  font-size: 32rpx;
   color: #BDBDBD;
   font-weight: 300;
 }
 
-/* 功能按钮 */
 .action-list {
   background: #FFFFFF;
-  border-radius: 16rpx;
-  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+  margin-bottom: 24rpx;
   overflow: hidden;
   box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.04);
 }
@@ -167,7 +163,7 @@
 .action-item {
   display: flex;
   align-items: center;
-  padding: 28rpx;
+  padding: 32rpx;
   border-bottom: 1rpx solid #F0F0F0;
 }
 
@@ -176,29 +172,28 @@
 }
 
 .action-icon {
-  font-size: 32rpx;
-  margin-right: 16rpx;
-  width: 40rpx;
+  font-size: 38rpx;
+  margin-right: 20rpx;
+  width: 48rpx;
   text-align: center;
 }
 
 .action-label {
-  font-size: 28rpx;
+  font-size: 32rpx;
   font-weight: normal;
   color: #1A1A1A;
 }
 
-/* 页脚 */
 .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 32rpx 0;
+  padding: 36rpx 0;
 }
 
 .footer-text {
-  font-size: 22rpx;
+  font-size: 26rpx;
   font-weight: normal;
   color: #BDBDBD;
-  margin-bottom: 6rpx;
+  margin-bottom: 8rpx;
 }
