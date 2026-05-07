@@ -18,6 +18,8 @@ Page({
   },
 
   onShow() {
+    // 更新全局活跃 tab
+    app.globalData.activeTab = 'index';
     // 更新打卡状态
     this.setData({
       consecutiveDays: app.globalData.consecutiveDays,

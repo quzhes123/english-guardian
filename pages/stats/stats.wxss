@@ -2,6 +2,7 @@
   min-height: 100vh;
   background: #F5F5F7;
   padding: 20rpx;
+  padding-bottom: calc(120rpx + env(safe-area-inset-bottom));
 }
 
 .stats-header {

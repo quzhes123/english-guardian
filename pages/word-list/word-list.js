@@ -12,6 +12,7 @@ Page({
   },
 
   onLoad() {
+    getApp().globalData.activeTab = 'word-list';
     this.loadCustomWords();
   },
 

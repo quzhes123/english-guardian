@@ -1,6 +1,7 @@
 App({
   globalData: {
     userInfo: null,
+    activeTab: 'index',
     // 学习进度数据
     studyData: {
       // 格式: { wordId: { nextReview: timestamp, interval: days,熟练度: 0-5 } }

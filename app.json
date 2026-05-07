@@ -53,6 +53,9 @@
       }
     ]
   },
+  "usingComponents": {
+    "tab-bar": "/components/tab-bar/tab-bar"
+  },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents"

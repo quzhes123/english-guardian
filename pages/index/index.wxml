@@ -6,7 +6,7 @@
       <text class="date">{{currentDate}}</text>
     </view>
     <view class="streak-badge" wx:if="{{consecutiveDays > 0}}">
-      <text class="streak-icon">·</text>
+      <text class="streak-icon">-</text>
       <text class="streak-count">{{consecutiveDays}}天</text>
     </view>
   </view>
@@ -40,7 +40,7 @@
           <text class="task-name">复习</text>
           <text class="task-count">{{reviewCount}}个词</text>
         </view>
-        <view class="task-arrow">›</view>
+        <view class="task-arrow">&gt;</view>
       </view>
       
       <view class="task-card new" bindtap="goToStudy">
@@ -49,7 +49,7 @@
           <text class="task-name">学习新词</text>
           <text class="task-count">{{newWordCount}}个词</text>
         </view>
-        <view class="task-arrow">›</view>
+        <view class="task-arrow">&gt;</view>
       </view>
     </view>
   </view>
@@ -76,4 +76,8 @@
       </view>
     </view>
   </view>
+
+  <!-- 底部自定义TabBar -->
+  <tab-bar active="index"></tab-bar>
 </view>
+

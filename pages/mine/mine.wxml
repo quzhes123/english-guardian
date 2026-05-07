@@ -63,4 +63,7 @@
     <text class="footer-text">英语守护者 v1.0</text>
     <text class="footer-text">为中考英语加油</text>
   </view>
+
+  <!-- 底部自定义TabBar -->
+  <tab-bar active="mine"></tab-bar>
 </view>

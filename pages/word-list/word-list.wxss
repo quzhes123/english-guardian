@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   background: #F5F5F7;
+  padding-bottom: calc(120rpx + env(safe-area-inset-bottom));
 }
 
 .search-bar {

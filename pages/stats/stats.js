@@ -19,6 +19,7 @@ Page({
   },
 
   onLoad() {
+    getApp().globalData.activeTab = 'stats';
     const now = new Date();
     const monthStr = `${now.getFullYear()}年${now.getMonth() + 1}月`;
     this.setData({ currentMonth: monthStr });
@@ -26,6 +27,7 @@ Page({
   },
 
   onShow() {
+    getApp().globalData.activeTab = 'stats';
     this.loadStats();
   },
 

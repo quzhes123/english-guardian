@@ -10,6 +10,7 @@ Page({
   },
 
   onLoad() {
+    getApp().globalData.activeTab = 'mine';
     // 加载设置
     const settings = wx.getStorageSync('userSettings') || {};
     this.setData({

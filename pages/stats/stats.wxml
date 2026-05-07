@@ -68,4 +68,7 @@
       </view>
     </view>
   </view>
+
+  <!-- 底部自定义TabBar -->
+  <tab-bar active="stats"></tab-bar>
 </view>

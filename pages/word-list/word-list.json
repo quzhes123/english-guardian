@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "tab-bar": "/components/tab-bar/tab-bar"
+  },
   "navigationBarTitleText": "词汇表"
 }

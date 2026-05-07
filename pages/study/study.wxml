@@ -35,4 +35,7 @@
     <text class="complete-sub">太棒了，记得明天继续学习</text>
     <button class="btn-back" bindtap="goBack">返回首页</button>
   </view>
+
+  <!-- 底部自定义TabBar -->
+  <tab-bar active="study"></tab-bar>
 </view>
