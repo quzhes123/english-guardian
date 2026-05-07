@@ -5,7 +5,7 @@
            placeholder="搜索单词..." 
            bindinput="onSearch"
            value="{{searchKey}}"/>
-    <view class="add-btn" bindtap="addWord">
+    <view class="add-btn" bindtap="showAddModal">
       <text class="add-icon">+</text>
     </view>
   </view>
@@ -48,6 +48,67 @@
       </view>
     </view>
   </scroll-view>
+
+  <!-- 添加单词弹窗 -->
+  <view class="modal-overlay {{showModal ? 'show' : ''}}" bindtap="hideModal">
+    <view class="modal-content" catchtap="stopProp">
+      <view class="modal-header">
+        <text class="modal-title">添加单词</text>
+        <view class="modal-close" bindtap="hideModal">×</view>
+      </view>
+      
+      <!-- 文本输入模式 -->
+      <view class="input-mode" wx:if="{{inputMode === 'text'}}">
+        <input class="modal-input" 
+               placeholder="输入单词（用逗号分隔多个）"
+               bindinput="onWordInput"
+               value="{{wordInput}}"/>
+        <view class="mode-switch">
+          <text class="mode-hint">或者</text>
+          <view class="upload-btn" bindtap="switchToImageMode">
+            <text class="upload-icon">📷</text>
+            <text class="upload-text">上传图片识别</text>
+          </view>
+        </view>
+      </view>
+
+      <!-- 图片识别模式 -->
+      <view class="image-mode" wx:if="{{inputMode === 'image'}}">
+        <view class="image-preview" wx:if="{{uploadedImage}}">
+          <image src="{{uploadedImage}}" mode="aspectFit" class="preview-img"/>
+          <view class="remove-image" bindtap="removeImage">×</view>
+        </view>
+        <view class="upload-area" wx:else bindtap="chooseImage">
+          <text class="upload-placeholder">点击上传图片</text>
+        </view>
+        <view class="recognized-words" wx:if="{{recognizedWords.length > 0}}">
+          <view class="recognized-title">识别到的单词：</view>
+          <view class="recognized-list">
+            <text class="recognized-word {{item.selected ? 'selected' : ''}}"
+                  wx:for="{{recognizedWords}}"
+                  wx:key="index"
+                  bindtap="toggleWord"
+                  data-index="{{index}}">
+              {{item.word}}
+            </text>
+          </view>
+        </view>
+        <view class="mode-switch">
+          <text class="mode-hint">或者</text>
+          <view class="text-btn" bindtap="switchToTextMode">
+            <text class="text-btn-icon">⌨️</text>
+            <text class="text-btn-text">手动输入</text>
+          </view>
+        </view>
+      </view>
+
+      <!-- 操作按钮 -->
+      <view class="modal-actions">
+        <button class="btn-cancel" bindtap="hideModal">取消</button>
+        <button class="btn-confirm" bindtap="confirmAdd">添加</button>
+      </view>
+    </view>
+  </view>
 
   <!-- 底部自定义TabBar -->
   <tab-bar active="word-list"></tab-bar>
