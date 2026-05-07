@@ -10,14 +10,14 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#4A90D9",
+    "navigationBarBackgroundColor": "#1A1A1A",
     "navigationBarTitleText": "英语守护者",
     "navigationBarTextStyle": "white",
-    "backgroundColor": "#F5F5F5"
+    "backgroundColor": "#F5F5F7"
   },
   "tabBar": {
-    "color": "#999999",
-    "selectedColor": "#4A90D9",
+    "color": "#8A8A8A",
+    "selectedColor": "#2177FF",
     "backgroundColor": "#FFFFFF",
     "borderStyle": "black",
     "list": [

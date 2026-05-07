@@ -1,6 +1,6 @@
 .container {
   min-height: 100vh;
-  background: #FFFFFF;
+  background: #F5F5F7;
   padding: 20rpx;
 }
 
@@ -9,64 +9,65 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50rpx 0 40rpx;
+  padding: 48rpx 0 32rpx;
 }
 
 .avatar {
-  width: 150rpx;
-  height: 150rpx;
-  background: linear-gradient(135deg, #4A90D9, #67B26F);
+  width: 140rpx;
+  height: 140rpx;
+  background: #2177FF;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20rpx;
-  box-shadow: 0 4rpx 20rpx rgba(74, 144, 217, 0.3);
+  box-shadow: 0 4rpx 16rpx rgba(33, 119, 255, 0.25);
 }
 
 .avatar-icon {
-  font-size: 80rpx;
+  font-size: 64rpx;
+  color: #FFFFFF;
 }
 
 .username {
-  font-size: 36rpx;
-  font-weight: bold;
-  color: #333333;
-  margin-bottom: 10rpx;
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #1A1A1A;
+  margin-bottom: 8rpx;
 }
 
 .grade {
-  font-size: 26rpx;
+  font-size: 24rpx;
   font-weight: normal;
-  color: #999999;
+  color: #8A8A8A;
 }
 
 /* 目标卡片 */
 .goal-card {
   background: #FFFFFF;
-  padding: 30rpx;
-  border-radius: 20rpx;
-  margin-bottom: 30rpx;
-  border: 1rpx solid #F0F0F0;
+  padding: 28rpx;
+  border-radius: 16rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.04);
 }
 
 .goal-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20rpx;
+  margin-bottom: 16rpx;
 }
 
 .goal-title {
   font-size: 28rpx;
-  font-weight: bold;
-  color: #333333;
+  font-weight: 600;
+  color: #1A1A1A;
 }
 
 .goal-edit {
   font-size: 24rpx;
   font-weight: normal;
-  color: #4A90D9;
+  color: #2177FF;
 }
 
 .goal-content {
@@ -75,50 +76,50 @@
 }
 
 .goal-text {
-  font-size: 26rpx;
+  font-size: 24rpx;
   font-weight: normal;
   color: #666666;
-  margin-bottom: 20rpx;
+  margin-bottom: 16rpx;
 }
 
 .goal-progress {
   display: flex;
   align-items: center;
-  gap: 20rpx;
+  gap: 16rpx;
 }
 
 .goal-bar {
   flex: 1;
-  height: 12rpx;
-  background: #E0E0E0;
-  border-radius: 6rpx;
+  height: 10rpx;
+  background: #E5E5E5;
+  border-radius: 5rpx;
 }
 
 .goal-fill {
   height: 100%;
-  background: linear-gradient(90deg, #4A90D9, #67B26F);
-  border-radius: 6rpx;
+  background: #2177FF;
+  border-radius: 5rpx;
 }
 
 .goal-percent {
-  font-size: 24rpx;
-  color: #4A90D9;
-  font-weight: bold;
+  font-size: 22rpx;
+  color: #2177FF;
+  font-weight: 600;
 }
 
 /* 设置列表 */
 .settings-list {
   background: #FFFFFF;
-  border-radius: 20rpx;
-  margin-bottom: 30rpx;
+  border-radius: 16rpx;
+  margin-bottom: 20rpx;
   overflow: hidden;
-  border: 1rpx solid #F0F0F0;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.04);
 }
 
 .settings-item {
   display: flex;
   align-items: center;
-  padding: 30rpx;
+  padding: 28rpx;
   border-bottom: 1rpx solid #F0F0F0;
 }
 
@@ -127,41 +128,45 @@
 }
 
 .settings-icon {
-  font-size: 36rpx;
-  margin-right: 20rpx;
+  font-size: 32rpx;
+  margin-right: 16rpx;
+  width: 40rpx;
+  text-align: center;
 }
 
 .settings-label {
   flex: 1;
   font-size: 28rpx;
   font-weight: normal;
-  color: #333333;
+  color: #1A1A1A;
 }
 
 .settings-value {
   font-size: 24rpx;
   font-weight: normal;
-  color: #999999;
-  margin-right: 15rpx;
+  color: #8A8A8A;
+  margin-right: 12rpx;
 }
 
 .settings-arrow {
-  font-size: 32rpx;
-  color: #CCCCCC;
+  font-size: 28rpx;
+  color: #BDBDBD;
+  font-weight: 300;
 }
 
 /* 功能按钮 */
 .action-list {
   background: #FFFFFF;
-  border-radius: 20rpx;
-  margin-bottom: 30rpx;
-  border: 1rpx solid #F0F0F0;
+  border-radius: 16rpx;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.04);
 }
 
 .action-item {
   display: flex;
   align-items: center;
-  padding: 30rpx;
+  padding: 28rpx;
   border-bottom: 1rpx solid #F0F0F0;
 }
 
@@ -170,14 +175,16 @@
 }
 
 .action-icon {
-  font-size: 36rpx;
-  margin-right: 20rpx;
+  font-size: 32rpx;
+  margin-right: 16rpx;
+  width: 40rpx;
+  text-align: center;
 }
 
 .action-label {
   font-size: 28rpx;
   font-weight: normal;
-  color: #333333;
+  color: #1A1A1A;
 }
 
 /* 页脚 */
@@ -185,12 +192,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40rpx 0;
+  padding: 32rpx 0;
 }
 
 .footer-text {
   font-size: 22rpx;
   font-weight: normal;
-  color: #CCCCCC;
-  margin-bottom: 8rpx;
+  color: #BDBDBD;
+  margin-bottom: 6rpx;
 }

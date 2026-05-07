@@ -11,10 +11,10 @@
       <text class="word">{{currentWord.word}}</text>
       <text class="phonetic">{{currentWord.phonetic}}</text>
       <view class="audio-btn" catchtap="playAudio">
-        <text class="audio-icon">🔊</text>
+        <text class="audio-icon">♪</text>
         <text class="audio-text">发音</text>
       </view>
-      <text class="hint">点击卡片查看中文释义</text>
+      <text class="hint">点击卡片查看释义</text>
     </view>
     <view class="card-back {{isFlipped ? '' : 'hidden'}}">
       <text class="meaning">{{currentWord.meaning}}</text>
@@ -31,9 +31,9 @@
 
   <!-- 学习完成 -->
   <view class="complete-section" wx:if="{{isComplete}}">
-    <text class="complete-icon">🎉</text>
-    <text class="complete-text">今日新词学习完成！</text>
-    <text class="complete-sub">太棒了，记得明天继续学习哦</text>
+    <text class="complete-icon">&#x2713;</text>
+    <text class="complete-text">今日新词学习完成</text>
+    <text class="complete-sub">太棒了，记得明天继续学习</text>
     <button class="btn-back" bindtap="goBack">返回首页</button>
   </view>
 </view>

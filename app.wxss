@@ -1,39 +1,39 @@
 /**app.wxss**/
 page {
-  background: #FFFFFF;
+  background: #F5F5F7;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  color: #333333;
+  color: #1A1A1A;
   font-size: 28rpx;
 }
 
 /* 全局文字样式 */
 .text-title {
   font-size: 36rpx;
-  font-weight: bold;
-  color: #333333;
+  font-weight: 600;
+  color: #1A1A1A;
   text-align: left;
 }
 
 .text-subtitle {
   font-size: 28rpx;
   font-weight: normal;
-  color: #999999;
+  color: #8A8A8A;
   text-align: left;
 }
 
 .text-time {
   font-size: 22rpx;
-  color: #CCCCCC;
+  color: #BDBDBD;
 }
 
 .text-status {
   font-size: 24rpx;
-  color: #FF9800;
+  color: #2177FF;
 }
 
 .text-status-done {
   font-size: 24rpx;
-  color: #4CAF50;
+  color: #34C759;
 }
 
 /* 全局按钮样式 */
@@ -42,41 +42,64 @@ page {
   align-items: center;
   justify-content: center;
   padding: 16rpx 32rpx;
-  background: #F5F5F5;
-  border-radius: 16rpx;
+  background: #FFFFFF;
+  border-radius: 12rpx;
   border: none;
 }
 
 .btn-action-text {
   font-size: 26rpx;
-  color: #4A90D9;
+  color: #2177FF;
   font-weight: 500;
 }
 
 .btn-action-arrow {
   font-size: 24rpx;
-  color: #4A90D9;
+  color: #2177FF;
   margin-left: 8rpx;
 }
 
 /* 主色调按钮 */
 .btn-primary {
-  background: linear-gradient(135deg, #4A90D9, #67B26F);
+  background: #2177FF;
   color: #FFFFFF;
-  border-radius: 50rpx;
+  border-radius: 12rpx;
   padding: 20rpx 40rpx;
   font-size: 28rpx;
   font-weight: 500;
   border: none;
-  box-shadow: 0 4rpx 15rpx rgba(74, 144, 217, 0.3);
 }
 
 /* 次要按钮 */
 .btn-secondary {
-  background: #F5F5F5;
+  background: #FFFFFF;
   color: #666666;
-  border-radius: 16rpx;
+  border-radius: 12rpx;
   padding: 16rpx 32rpx;
   font-size: 26rpx;
-  border: 1rpx solid #E0E0E0;
+  border: 1rpx solid #E5E5E5;
+}
+
+/* 通用卡片样式 */
+.card {
+  background: #FFFFFF;
+  border-radius: 16rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.04);
+  padding: 32rpx;
+}
+
+/* 大号数字 */
+.number-large {
+  font-size: 48rpx;
+  font-weight: 700;
+  color: #2177FF;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* 标签文字 */
+.label-small {
+  font-size: 22rpx;
+  color: #8A8A8A;
+  text-transform: uppercase;
+  letter-spacing: 1rpx;
 }

@@ -40,7 +40,7 @@
           </view>
           <view class="word-actions">
             <view class="audio-btn-small" catchtap="playAudio" data-word="{{item.word}}">
-              <text class="audio-icon-small">🔊</text>
+              <text class="audio-icon-small">&#x266B;</text>
             </view>
             <text class="word-meaning">{{item.meaning}}</text>
           </view>

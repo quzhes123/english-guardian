@@ -1,6 +1,6 @@
 <view class="container">
   <view class="stats-header">
-    <text class="title">📊 学习统计</text>
+    <text class="title">学习统计</text>
   </view>
 
   <!-- 总体进度 -->
@@ -30,7 +30,7 @@
 
   <!-- 学习日历 -->
   <view class="calendar-section">
-    <text class="section-title">📅 {{currentMonth}} 学习日历</text>
+    <text class="section-title">{{currentMonth}} 学习日历</text>
     <view class="calendar-grid">
       <view class="weekday" wx:for="{{weekdays}}" wx:key="index">{{item}}</view>
       <view class="day {{item.status}}"
@@ -43,7 +43,7 @@
 
   <!-- 掌握度分布 -->
   <view class="mastery-section">
-    <text class="section-title">📈 单词掌握度</text>
+    <text class="section-title">单词掌握度</text>
     <view class="mastery-bars">
       <view class="mastery-item">
         <text class="mastery-label">陌生</text>

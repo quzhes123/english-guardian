@@ -1,19 +1,19 @@
 .container {
   min-height: 100vh;
-  background: #FFFFFF;
+  background: #F5F5F7;
   padding: 20rpx;
 }
 
-/* 顶部欢迎区域 */
+/* 顶部欢迎区域 - 简洁卡片 */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30rpx 20rpx;
-  background: linear-gradient(135deg, #4A90D9 0%, #67B26F 100%);
-  border-radius: 20rpx;
-  margin-bottom: 30rpx;
-  box-shadow: 0 4rpx 20rpx rgba(74, 144, 217, 0.3);
+  padding: 32rpx 36rpx;
+  background: #FFFFFF;
+  border-radius: 16rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.04);
 }
 
 .greeting {
@@ -23,39 +23,40 @@
 
 .greeting-text {
   font-size: 36rpx;
-  font-weight: bold;
-  color: #FFFFFF;
-  margin-bottom: 10rpx;
+  font-weight: 600;
+  color: #1A1A1A;
+  margin-bottom: 8rpx;
 }
 
 .date {
   font-size: 24rpx;
-  color: rgba(255, 255, 255, 0.8);
+  color: #8A8A8A;
   font-weight: normal;
 }
 
 .streak-badge {
   display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 15rpx 25rpx;
-  border-radius: 30rpx;
+  background: #F5F5F7;
+  padding: 12rpx 20rpx;
+  border-radius: 20rpx;
 }
 
 .streak-icon {
-  font-size: 32rpx;
-  margin-right: 10rpx;
+  font-size: 24rpx;
+  margin-right: 8rpx;
+  opacity: 0.6;
 }
 
 .streak-count {
-  font-size: 28rpx;
-  font-weight: bold;
-  color: #FFFFFF;
+  font-size: 26rpx;
+  font-weight: 600;
+  color: #1A1A1A;
 }
 
 /* 打卡区域 */
 .checkin-section {
-  margin-bottom: 30rpx;
+  margin-bottom: 20rpx;
 }
 
 .checkin-card {
@@ -63,15 +64,13 @@
   justify-content: space-between;
   align-items: center;
   background: #FFFFFF;
-  padding: 30rpx;
-  border-radius: 20rpx;
-  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
-  border: 1rpx solid #F0F0F0;
+  padding: 32rpx 36rpx;
+  border-radius: 16rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.04);
 }
 
 .checkin-card.checked {
-  background: #E8F5E9;
-  border-color: #C8E6C9;
+  background: #FFFFFF;
 }
 
 .checkin-info {
@@ -81,60 +80,59 @@
 
 .checkin-title {
   font-size: 32rpx;
-  font-weight: bold;
-  color: #333333;
-  margin-bottom: 10rpx;
+  font-weight: 600;
+  color: #1A1A1A;
+  margin-bottom: 8rpx;
 }
 
 .checkin-subtitle {
   font-size: 24rpx;
   font-weight: normal;
-  color: #999999;
+  color: #8A8A8A;
 }
 
 .checkin-btn {
-  width: 160rpx;
-  height: 70rpx;
-  line-height: 70rpx;
-  background: linear-gradient(135deg, #4A90D9, #67B26F);
+  width: 140rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  background: #2177FF;
   color: #FFFFFF;
-  font-size: 28rpx;
+  font-size: 26rpx;
   font-weight: 500;
-  border-radius: 35rpx;
+  border-radius: 12rpx;
   border: none;
-  box-shadow: 0 4rpx 15rpx rgba(74, 144, 217, 0.3);
 }
 
 .checkin-btn.disabled {
-  background: #CCCCCC;
-  box-shadow: none;
+  background: #F0F0F0;
+  color: #8A8A8A;
 }
 
 /* 今日任务区域 */
 .task-section {
-  margin-bottom: 30rpx;
+  margin-bottom: 20rpx;
 }
 
 .section-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 32rpx;
-  font-weight: bold;
-  color: #333333;
-  margin-bottom: 20rpx;
-  padding: 0 10rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #1A1A1A;
+  margin-bottom: 16rpx;
+  padding: 0 8rpx;
 }
 
 .progress-text {
   font-size: 24rpx;
-  color: #999999;
+  color: #8A8A8A;
   font-weight: normal;
 }
 
 .task-cards {
   display: flex;
-  gap: 20rpx;
+  gap: 16rpx;
 }
 
 .task-card {
@@ -142,23 +140,29 @@
   display: flex;
   align-items: center;
   background: #FFFFFF;
-  padding: 30rpx 20rpx;
-  border-radius: 20rpx;
-  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
-  border: 1rpx solid #F0F0F0;
+  padding: 28rpx 24rpx;
+  border-radius: 16rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.04);
 }
 
 .task-card.review {
-  border-left: 6rpx solid #FF9800;
+  border-left: 4rpx solid #2177FF;
 }
 
 .task-card.new {
-  border-left: 6rpx solid #4A90D9;
+  border-left: 4rpx solid #FF6B35;
 }
 
 .task-icon {
-  font-size: 48rpx;
+  width: 48rpx;
+  height: 48rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F5F5F7;
+  border-radius: 12rpx;
   margin-right: 20rpx;
+  font-size: 24rpx;
 }
 
 .task-info {
@@ -169,31 +173,32 @@
 
 .task-name {
   font-size: 28rpx;
-  font-weight: bold;
-  color: #333333;
-  margin-bottom: 8rpx;
+  font-weight: 600;
+  color: #1A1A1A;
+  margin-bottom: 6rpx;
 }
 
 .task-count {
   font-size: 22rpx;
   font-weight: normal;
-  color: #999999;
+  color: #8A8A8A;
 }
 
 .task-arrow {
-  font-size: 40rpx;
-  color: #CCCCCC;
+  font-size: 32rpx;
+  color: #BDBDBD;
+  font-weight: 300;
 }
 
 /* 快捷入口 */
 .quick-section {
-  margin-bottom: 30rpx;
+  margin-bottom: 20rpx;
 }
 
 .quick-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20rpx;
+  gap: 16rpx;
 }
 
 .quick-item {
@@ -201,19 +206,25 @@
   flex-direction: column;
   align-items: center;
   background: #FFFFFF;
-  padding: 30rpx 10rpx;
+  padding: 28rpx 16rpx;
   border-radius: 16rpx;
-  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
-  border: 1rpx solid #F0F0F0;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.04);
 }
 
 .quick-icon {
-  font-size: 48rpx;
-  margin-bottom: 15rpx;
+  width: 56rpx;
+  height: 56rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F5F5F7;
+  border-radius: 14rpx;
+  margin-bottom: 12rpx;
+  font-size: 28rpx;
 }
 
 .quick-text {
-  font-size: 24rpx;
-  font-weight: normal;
+  font-size: 22rpx;
+  font-weight: 500;
   color: #666666;
 }

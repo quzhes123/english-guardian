@@ -1,7 +1,7 @@
 .container {
   min-height: 100vh;
-  background: #FFFFFF;
-  padding: 30rpx;
+  background: #F5F5F7;
+  padding: 20rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,40 +10,41 @@
 /* 进度条 */
 .progress-bar {
   width: 100%;
-  height: 12rpx;
-  background: #F5F5F5;
-  border-radius: 6rpx;
-  margin-bottom: 15rpx;
+  height: 8rpx;
+  background: #E5E5E5;
+  border-radius: 4rpx;
+  margin-bottom: 12rpx;
   overflow: hidden;
 }
 
 .progress-inner {
   height: 100%;
-  background: linear-gradient(90deg, #4A90D9, #67B26F);
-  border-radius: 6rpx;
+  background: #2177FF;
+  border-radius: 4rpx;
   transition: width 0.3s ease;
 }
 
 .progress-text {
   font-size: 24rpx;
-  color: #999999;
+  color: #8A8A8A;
   margin-bottom: 40rpx;
 }
 
 /* 单词卡片 */
 .word-card {
-  width: 90%;
-  height: 450rpx;
+  width: 100%;
   background: #FFFFFF;
-  border-radius: 30rpx;
-  box-shadow: 0 8rpx 40rpx rgba(0, 0, 0, 0.08);
+  border-radius: 20rpx;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 50rpx;
+  margin-bottom: 40rpx;
   position: relative;
-  border: 1rpx solid #F0F0F0;
+  min-height: 400rpx;
+  padding: 60rpx 40rpx;
+  box-sizing: border-box;
 }
 
 .card-front, .card-back {
@@ -52,11 +53,12 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  padding: 40rpx;
+  right: 0;
+  bottom: 0;
+  padding: 60rpx 40rpx;
   box-sizing: border-box;
 }
 
@@ -66,57 +68,82 @@
 
 /* 主标题文字 - 单词 */
 .word {
-  font-size: 64rpx;
-  font-weight: bold;
-  color: #333333;
-  margin-bottom: 20rpx;
+  font-size: 56rpx;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 16rpx;
   text-align: center;
+  letter-spacing: 2rpx;
 }
 
 /* 副标题文字 - 音标 */
 .phonetic {
   font-size: 28rpx;
   font-weight: normal;
-  color: #999999;
-  margin-bottom: 30rpx;
+  color: #8A8A8A;
+  margin-bottom: 24rpx;
   text-align: center;
 }
 
 /* 提示文字 */
 .hint {
-  font-size: 24rpx;
-  color: #CCCCCC;
+  font-size: 22rpx;
+  color: #BDBDBD;
   text-align: center;
+  margin-top: 16rpx;
 }
 
-/* 释义 - 主色调 */
+/* 释义 */
 .meaning {
-  font-size: 48rpx;
-  font-weight: bold;
-  color: #4A90D9;
-  margin-bottom: 30rpx;
+  font-size: 44rpx;
+  font-weight: 600;
+  color: #2177FF;
+  margin-bottom: 24rpx;
   text-align: center;
 }
 
 /* 单词小字 */
 .word-small {
-  font-size: 32rpx;
+  font-size: 28rpx;
   font-weight: normal;
-  color: #666666;
+  color: #8A8A8A;
   text-align: center;
+}
+
+/* 发音按钮 */
+.audio-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8rpx;
+  padding: 16rpx 32rpx;
+  background: #F5F5F7;
+  border-radius: 20rpx;
+  margin-bottom: 24rpx;
+}
+
+.audio-icon {
+  font-size: 28rpx;
+  color: #2177FF;
+}
+
+.audio-text {
+  font-size: 24rpx;
+  color: #2177FF;
+  font-weight: 500;
 }
 
 /* 操作按钮 */
 .action-buttons {
   display: flex;
-  gap: 30rpx;
-  width: 90%;
+  gap: 20rpx;
+  width: 100%;
 }
 
 .action-buttons button {
   flex: 1;
-  height: 90rpx;
-  border-radius: 45rpx;
+  height: 88rpx;
+  border-radius: 16rpx;
   font-size: 28rpx;
   font-weight: 500;
   border: none;
@@ -126,41 +153,18 @@
 }
 
 .btn-fail {
-  background: #FFF3E0;
-  color: #FF9800;
+  background: #FFFFFF;
+  color: #FF6B35;
 }
 
 .btn-next {
-  background: #E3F2FD;
-  color: #2196F3;
+  background: #FFFFFF;
+  color: #666666;
 }
 
 .btn-pass {
-  background: #E8F5E9;
-  color: #4CAF50;
-}
-
-/* 发音按钮 */
-.audio-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10rpx;
-  padding: 20rpx 40rpx;
-  background: linear-gradient(135deg, #4A90D9, #67B26F);
-  border-radius: 50rpx;
-  margin-bottom: 30rpx;
-  box-shadow: 0 4rpx 15rpx rgba(74, 144, 217, 0.3);
-}
-
-.audio-icon {
-  font-size: 36rpx;
-}
-
-.audio-text {
-  font-size: 26rpx;
+  background: #2177FF;
   color: #FFFFFF;
-  font-weight: 500;
 }
 
 /* 学习完成 */
@@ -168,37 +172,37 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 100rpx;
+  margin-top: 120rpx;
 }
 
 .complete-icon {
-  font-size: 120rpx;
-  margin-bottom: 30rpx;
+  font-size: 80rpx;
+  margin-bottom: 24rpx;
+  opacity: 0.8;
 }
 
 .complete-text {
-  font-size: 40rpx;
-  font-weight: bold;
-  color: #333333;
-  margin-bottom: 20rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #1A1A1A;
+  margin-bottom: 16rpx;
 }
 
 .complete-sub {
-  font-size: 28rpx;
+  font-size: 26rpx;
   font-weight: normal;
-  color: #999999;
-  margin-bottom: 60rpx;
+  color: #8A8A8A;
+  margin-bottom: 48rpx;
 }
 
 .btn-back {
-  width: 300rpx;
+  width: 280rpx;
   height: 80rpx;
   line-height: 80rpx;
-  background: linear-gradient(135deg, #4A90D9, #67B26F);
+  background: #2177FF;
   color: #FFFFFF;
   font-size: 28rpx;
   font-weight: 500;
-  border-radius: 40rpx;
+  border-radius: 16rpx;
   border: none;
-  box-shadow: 0 4rpx 15rpx rgba(74, 144, 217, 0.3);
 }

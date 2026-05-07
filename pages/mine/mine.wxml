@@ -2,7 +2,7 @@
   <!-- 用户信息 -->
   <view class="profile-section">
     <view class="avatar">
-      <text class="avatar-icon">🦞</text>
+      <text class="avatar-icon">&#x4E;2</text>
     </view>
     <text class="username">初中生</text>
     <text class="grade">初一 · 天津</text>
@@ -11,7 +11,7 @@
   <!-- 学习目标 -->
   <view class="goal-card">
     <view class="goal-header">
-      <text class="goal-title">🎯 中考目标</text>
+      <text class="goal-title">中考目标</text>
       <text class="goal-edit" bindtap="editGoal">编辑</text>
     </view>
     <view class="goal-content">
@@ -28,19 +28,19 @@
   <!-- 设置列表 -->
   <view class="settings-list">
     <view class="settings-item" bindtap="showSetting" data-key="daily">
-      <text class="settings-icon">📝</text>
+      <text class="settings-icon">&#x25A0;</text>
       <text class="settings-label">每日学习目标</text>
       <text class="settings-value">{{dailyTarget}}个词</text>
       <text class="settings-arrow">›</text>
     </view>
     <view class="settings-item" bindtap="showSetting" data-key="reminder">
-      <text class="settings-icon">🔔</text>
+      <text class="settings-icon">&#x25B6;</text>
       <text class="settings-label">学习提醒</text>
       <text class="settings-value">{{reminderEnabled ? '已开启' : '已关闭'}}</text>
       <text class="settings-arrow">›</text>
     </view>
     <view class="settings-item" bindtap="showSetting" data-key="sound">
-      <text class="settings-icon">🔊</text>
+      <text class="settings-icon">&#x266B;</text>
       <text class="settings-label">发音朗读</text>
       <text class="settings-value">{{soundEnabled ? '已开启' : '已关闭'}}</text>
       <text class="settings-arrow">›</text>
@@ -50,17 +50,17 @@
   <!-- 功能按钮 -->
   <view class="action-list">
     <view class="action-item" bindtap="exportData">
-      <text class="action-icon">📤</text>
+      <text class="action-icon">&#x2191;</text>
       <text class="action-label">导出学习记录</text>
     </view>
     <view class="action-item" bindtap="showAbout">
-      <text class="action-icon">ℹ️</text>
+      <text class="action-icon">&#x24D8;</text>
       <text class="action-label">关于小程序</text>
     </view>
   </view>
 
   <view class="footer">
     <text class="footer-text">英语守护者 v1.0</text>
-    <text class="footer-text">为中考英语加油 💪</text>
+    <text class="footer-text">为中考英语加油</text>
   </view>
 </view>
