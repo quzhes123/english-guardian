@@ -7,11 +7,17 @@
     "upload": "node scripts/upload.js",
     "check": "node --check app.js && node --check pages/**/*.js"
   },
-  "keywords": ["wechat", "miniprogram", "english", "study", "middle-school"],
+  "keywords": [
+    "wechat",
+    "miniprogram",
+    "english",
+    "study",
+    "middle-school"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "gh": "^2.8.9",
     "miniprogram-ci": "^2.1.34"
-  },
-  "devDependencies": {}
+  }
 }
