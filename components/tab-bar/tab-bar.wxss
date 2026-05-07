@@ -3,12 +3,9 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: auto;
   background: #FFFFFF;
-  padding-bottom: env(safe-area-inset-bottom);
   padding-top: 8rpx;
-  padding-bottom: 8rpx;
-  border-top: 1rpx solid #E5E5E5;
+  padding-bottom: calc(8rpx + env(safe-area-inset-bottom));
   display: flex;
   flex-direction: row;
   z-index: 1000;
@@ -26,18 +23,27 @@
 }
 
 .tab-icon {
-  width: 48rpx;
-  height: 48rpx;
+  width: 52rpx;
+  height: 52rpx;
   margin-bottom: 4rpx;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 40rpx;
+  line-height: 1;
 }
 
-.tab-icon image {
-  width: 48rpx;
-  height: 48rpx;
-}
+.home-icon::before { content: '🏠'; }
+.study-icon::before { content: '📖'; }
+.word-list-icon::before { content: '📝'; }
+.stats-icon::before { content: '📊'; }
+.mine-icon::before { content: '👤'; }
+
+.tab-item.active .home-icon::before { content: '🏠'; }
+.tab-item.active .study-icon::before { content: '📖'; }
+.tab-item.active .word-list-icon::before { content: '📝'; }
+.tab-item.active .stats-icon::before { content: '📊'; }
+.tab-item.active .mine-icon::before { content: '👤'; }
 
 .tab-text {
   font-size: 22rpx;

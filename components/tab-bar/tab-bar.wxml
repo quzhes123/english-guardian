@@ -1,36 +1,26 @@
 <view class="tab-bar">
   <view class="tab-item {{active === 'index' ? 'active' : ''}}" bindtap="switchTab" data-tab="index">
-    <view class="tab-icon">
-      <image src="/images/{{active === 'index' ? 'home-active' : 'home'}}.png" mode="aspectFit" />
-    </view>
+    <view class="tab-icon home-icon"></view>
     <text class="tab-text">首页</text>
   </view>
 
   <view class="tab-item {{active === 'study' ? 'active' : ''}}" bindtap="switchTab" data-tab="study">
-    <view class="tab-icon">
-      <image src="/images/{{active === 'study' ? 'book-active' : 'book'}}.png" mode="aspectFit" />
-    </view>
+    <view class="tab-icon study-icon"></view>
     <text class="tab-text">学习</text>
   </view>
 
   <view class="tab-item {{active === 'word-list' ? 'active' : ''}}" bindtap="switchTab" data-tab="word-list">
-    <view class="tab-icon">
-      <image src="/images/{{active === 'word-list' ? 'list-active' : 'list'}}.png" mode="aspectFit" />
-    </view>
+    <view class="tab-icon word-list-icon"></view>
     <text class="tab-text">词汇</text>
   </view>
 
   <view class="tab-item {{active === 'stats' ? 'active' : ''}}" bindtap="switchTab" data-tab="stats">
-    <view class="tab-icon">
-      <image src="/images/{{active === 'stats' ? 'chart-active' : 'chart'}}.png" mode="aspectFit" />
-    </view>
+    <view class="tab-icon stats-icon"></view>
     <text class="tab-text">统计</text>
   </view>
 
   <view class="tab-item {{active === 'mine' ? 'active' : ''}}" bindtap="switchTab" data-tab="mine">
-    <view class="tab-icon">
-      <image src="/images/{{active === 'mine' ? 'mine-active' : 'mine'}}.png" mode="aspectFit" />
-    </view>
+    <view class="tab-icon mine-icon"></view>
     <text class="tab-text">我的</text>
   </view>
 </view>
