@@ -126,44 +126,47 @@
 }
 
 .action-buttons {
-  display: flex;
-  gap: 12rpx;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
 }
 
-.action-buttons button {
+.btn-row {
+  display: flex;
+  gap: 16rpx;
+}
+
+.btn-half {
   flex: 1;
-  min-width: 0;
   height: 88rpx;
+  background: #FFFFFF;
   border-radius: 16rpx;
   font-size: 28rpx;
   font-weight: 500;
-  border: none;
+  border: 2rpx solid #E5E5E5;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 
 .btn-prev {
-  background: #FFFFFF;
   color: #666666;
-  border: 2rpx solid #E5E5E5;
 }
 
 .btn-fail {
-  background: #FFFFFF;
   color: #FF6B35;
+  border-color: #FF6B35;
 }
 
 .btn-next {
-  background: #FFFFFF;
   color: #666666;
 }
 
 .btn-pass {
   background: #2177FF;
   color: #FFFFFF;
+  border: none;
 }
 
 .complete-section {
