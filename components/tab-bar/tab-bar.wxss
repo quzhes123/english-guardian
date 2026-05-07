@@ -16,34 +16,40 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 8rpx 0 10rpx;
+  padding: 10rpx 0 8rpx;
   background: transparent;
   border: none;
 }
 
 .tab-icon {
-  width: 52rpx;
-  height: 52rpx;
-  margin-bottom: 6rpx;
+  width: 56rpx;
+  height: 56rpx;
+  margin-bottom: 4rpx;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 48rpx;
+  font-size: 50rpx;
   line-height: 1;
   color: #8E8E93;
 }
 
 .tab-item.active .tab-icon {
-  color: #007AFF;
+  color: #00B42A;
 }
 
+.home-icon::before { content: '⌂'; }
+.study-icon::before { content: '📖'; }
+.word-list-icon::before { content: '☰'; }
+.stats-icon::before { content: '▤'; }
+.mine-icon::before { content: '⚙'; }
+
 .tab-text {
-  font-size: 24rpx;
+  font-size: 22rpx;
   font-weight: 400;
   color: #8E8E93;
   line-height: 1;
 }
 
 .tab-item.active .tab-text {
-  color: #007AFF;
+  color: #00B42A;
 }
