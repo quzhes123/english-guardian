@@ -33,13 +33,13 @@
 
     <!-- 题目 -->
     <view class="question-card">
-      <text class="question-type">{{testMode === 'word2meaning' ? '选择中文释义' : '默写英文单词'}}</text>
-      <text class="question-word">{{testMode === 'meaning2word' ? currentQuestion.meaning : currentQuestion.word}}</text>
-      <text class="question-hint" wx:if="{{testMode === 'meaning2word'}}">请在下方输入英文单词</text>
+      <text class="question-type">{{testMode === 'word2meaning' ? '选择中文释义' : (testMode === 'meaning2word' ? '默写英文单词' : (currentQuestion.type === 'choice' ? '选择中文释义' : '默写英文单词'))}}</text>
+      <text class="question-word">{{currentQuestion.type === 'input' ? currentQuestion.meaning : currentQuestion.word}}</text>
+      <text class="question-hint" wx:if="{{testMode === 'meaning2word' || currentQuestion.type === 'input'}}">请在下方输入英文单词</text>
     </view>
 
     <!-- 选择题选项 -->
-    <view class="options" wx:if="{{testMode === 'word2meaning'}}">
+    <view class="options" wx:if="{{(testMode === 'word2meaning' || currentQuestion.type === 'choice') && currentQuestion.type !== 'input'}}">
       <view class="option-btn {{selectedOption === index ? (option === currentQuestion.correctAnswer ? 'correct' : 'wrong') : ''}}"
             wx:for="{{currentQuestion.options}}"
             wx:for-item="option"
@@ -51,7 +51,7 @@
     </view>
 
     <!-- 填空题输入 -->
-    <view class="input-section" wx:if="{{testMode === 'meaning2word' && !answered}}">
+    <view class="input-section" wx:if="{{(testMode === 'meaning2word' || currentQuestion.type === 'input') && !answered}}">
       <input class="answer-input" 
              placeholder="输入英文单词..." 
              bindinput="onAnswerInput"
