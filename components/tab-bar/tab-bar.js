@@ -26,7 +26,7 @@ Component({
         'mine': '/pages/mine/mine'
       };
       
-      wx.switchTab({
+      wx.reLaunch({
         url: pageMap[tab]
       });
     }
