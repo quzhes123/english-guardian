@@ -42,6 +42,7 @@
     <view class="options" wx:if="{{testMode === 'word2meaning'}}">
       <view class="option-btn {{selectedOption === index ? (option === currentQuestion.correctAnswer ? 'correct' : 'wrong') : ''}}"
             wx:for="{{currentQuestion.options}}"
+            wx:for-item="option"
             wx:key="index"
             bindtap="selectOption"
             data-index="{{index}}">
