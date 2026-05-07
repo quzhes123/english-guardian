@@ -122,8 +122,9 @@
 
 .btn-study {
   width: 240rpx;
-  height: 76rpx;
-  line-height: 76rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
   background: #2177FF;
   color: #FFFFFF;
   font-size: 28rpx;
