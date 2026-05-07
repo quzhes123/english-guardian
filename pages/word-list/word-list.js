@@ -183,49 +183,44 @@ Page({
   recognizeImage(filePath) {
     wx.showLoading({ title: '识别中...' });
 
-    // 这里使用有道OCR API进行文字识别
-    // 实际项目中需要替换为真实可用的OCR接口
-    const apiUrl = 'https://openapi.youdao.com/ocrapi';
-    
     // 将图片转为base64
     wx.getFileSystemManager().readFile({
       filePath: filePath,
       encoding: 'base64',
       success: (res) => {
         const base64Data = res.data;
-        
-        // 调用OCR API（这里需要您提供API密钥，或者使用其他免费OCR服务）
-        // 为了演示，这里先模拟识别结果
-        wx.hideLoading();
-        
-        // TODO: 替换为您实际的OCR接口
-        // 这里可以使用百度OCR、腾讯OCR或有道OCR
-        // 示例使用有道OCR:
-        /*
+
+        // 使用 OCR.space 免费 API
         wx.request({
-          url: apiUrl,
+          url: 'https://api.ocr.space/parse/image',
           method: 'POST',
           header: {
-            'Content-Type': 'application/x-www-form-urlencoded'
+            'apikey': 'helloworld' // 免费API密钥，有频率限制
           },
           data: {
-            appKey: '您的APP_KEY',
-            img: base64Data,
-            langType: 'auto'
+            base64Image: 'data:image/png;base64,' + base64Data,
+            language: 'eng',
+            isOverlayRequired: false
           },
           success: (res) => {
-            if (res.data.errorCode === '0') {
-              this.parseRecognizedText(res.data.text);
+            wx.hideLoading();
+            if (res.data && res.data.ParsedResults && res.data.ParsedResults.length > 0) {
+              const text = res.data.ParsedResults.map(r => r.ParsedText).join('\n');
+              this.parseRecognizedText(text);
+            } else if (res.data.ErrorMessage) {
+              wx.showToast({
+                title: res.data.ErrorMessage[0] || '识别失败',
+                icon: 'none'
+              });
+            } else {
+              wx.showToast({ title: '未识别到文字', icon: 'none' });
             }
+          },
+          fail: (err) => {
+            wx.hideLoading();
+            console.error('OCR request failed:', err);
+            wx.showToast({ title: '识别请求失败', icon: 'none' });
           }
-        });
-        */
-        
-        // 演示用：模拟OCR识别结果
-        wx.showToast({ 
-          title: '请配置OCR接口', 
-          icon: 'none',
-          duration: 2000
         });
       },
       fail: (err) => {

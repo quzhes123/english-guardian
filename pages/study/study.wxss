@@ -146,8 +146,9 @@
 }
 
 .btn-prev {
-  background: #F5F5F7;
+  background: #FFFFFF;
   color: #666666;
+  border: 2rpx solid #E5E5E5;
 }
 
 .btn-fail {

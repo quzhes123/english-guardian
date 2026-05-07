@@ -3,46 +3,26 @@ name: Deploy Mini Program
 on:
   push:
     branches: [main]
-  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        
+      - uses: actions/checkout@v4
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'npm'
-          
+
       - name: Install dependencies
-        run: |
-          npm install miniprogram-automator -g
-          
-      - name: Install miniprogram-ci
-        run: npm install miniprogram-ci
-        
-      - name: Build (if needed)
-        run: |
-          # Add build commands here if you have a build process
-          echo "Build step completed"
-          
+        run: npm install
+
       - name: Upload to WeChat
         env:
           WX_APPID: ${{ secrets.WX_APPID }}
           WX_PRIVATE_KEY: ${{ secrets.WX_PRIVATE_KEY }}
-        run: |
-          node scripts/upload.js
-          
-      - name: Create Release
-        if: github.event_name == 'push'
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: v${{ github.run_number }}
-          release_name: Release v${{ github.run_number }}
+        run: node scripts/upload.js

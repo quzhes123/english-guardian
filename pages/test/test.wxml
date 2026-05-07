@@ -40,14 +40,13 @@
 
     <!-- 选择题选项 -->
     <view class="options" wx:if="{{testMode === 'word2meaning'}}">
-      <button class="option-btn {{selectedOption === index ? (option === currentQuestion.correctAnswer ? 'correct' : 'wrong') : ''}}"
-              wx:for="{{currentQuestion.options}}"
-              wx:key="index"
-              bindtap="selectOption"
-              data-index="{{index}}"
-              disabled="{{answered}}">
+      <view class="option-btn {{selectedOption === index ? (option === currentQuestion.correctAnswer ? 'correct' : 'wrong') : ''}}"
+            wx:for="{{currentQuestion.options}}"
+            wx:key="index"
+            bindtap="selectOption"
+            data-index="{{index}}">
         {{option}}
-      </button>
+      </view>
     </view>
 
     <!-- 填空题输入 -->

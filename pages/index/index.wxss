@@ -96,6 +96,7 @@
   width: 160rpx;
   height: 72rpx;
   line-height: 72rpx;
+  text-align: center;
   background: #2177FF;
   color: #FFFFFF;
   font-size: 30rpx;
