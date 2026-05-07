@@ -4,8 +4,7 @@
   left: 0;
   right: 0;
   background: #FFFFFF;
-  padding-top: 8rpx;
-  padding-bottom: calc(8rpx + env(safe-area-inset-bottom));
+  padding-bottom: env(safe-area-inset-bottom);
   display: flex;
   flex-direction: row;
   z-index: 1000;
@@ -17,38 +16,26 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 6rpx 0;
+  padding: 8rpx 0 10rpx;
   background: transparent;
   border: none;
 }
 
 .tab-icon {
-  width: 52rpx;
-  height: 52rpx;
+  width: 48rpx;
+  height: 48rpx;
   margin-bottom: 4rpx;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 36rpx;
+  font-size: 44rpx;
   line-height: 1;
   color: #8E8E93;
 }
 
 .tab-item.active .tab-icon {
-  color: #007AFF;
+  color: #00B42A;
 }
-
-.home-icon::before { content: '⌂'; }
-.study-icon::before { content: '📖'; }
-.word-list-icon::before { content: '☰'; }
-.stats-icon::before { content: '▤'; }
-.mine-icon::before { content: '⚙'; }
-
-.tab-item.active .home-icon::before { content: '⌂'; }
-.tab-item.active .study-icon::before { content: '📖'; }
-.tab-item.active .word-list-icon::before { content: '☰'; }
-.tab-item.active .stats-icon::before { content: '▤'; }
-.tab-item.active .mine-icon::before { content: '⚙'; }
 
 .tab-text {
   font-size: 20rpx;
@@ -58,5 +45,5 @@
 }
 
 .tab-item.active .tab-text {
-  color: #007AFF;
+  color: #00B42A;
 }
