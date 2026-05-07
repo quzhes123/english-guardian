@@ -195,23 +195,29 @@ Page({
           url: 'https://api.ocr.space/parse/image',
           method: 'POST',
           header: {
-            'apikey': 'helloworld' // 免费API密钥，有频率限制
+            'apikey': 'helloworld',
+            'Content-Type': 'application/x-www-form-urlencoded'
           },
           data: {
             base64Image: 'data:image/png;base64,' + base64Data,
             language: 'eng',
-            isOverlayRequired: false
+            isOverlayRequired: false,
+            detectOrientation: true,
+            scale: true
           },
           success: (res) => {
             wx.hideLoading();
+            console.log('OCR response:', res.data);
             if (res.data && res.data.ParsedResults && res.data.ParsedResults.length > 0) {
               const text = res.data.ParsedResults.map(r => r.ParsedText).join('\n');
               this.parseRecognizedText(text);
-            } else if (res.data.ErrorMessage) {
+            } else if (res.data && res.data.ErrorMessage) {
               wx.showToast({
                 title: res.data.ErrorMessage[0] || '识别失败',
                 icon: 'none'
               });
+            } else if (res.data && res.data.IsErroredOnProcessing) {
+              wx.showToast({ title: '图片识别失败，请重试', icon: 'none' });
             } else {
               wx.showToast({ title: '未识别到文字', icon: 'none' });
             }
