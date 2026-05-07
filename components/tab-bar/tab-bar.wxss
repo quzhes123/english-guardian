@@ -29,24 +29,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 40rpx;
+  font-size: 36rpx;
   line-height: 1;
+  color: #8E8E93;
 }
 
-.home-icon::before { content: '🏠'; }
-.study-icon::before { content: '📖'; }
-.word-list-icon::before { content: '📝'; }
-.stats-icon::before { content: '📊'; }
-.mine-icon::before { content: '👤'; }
+.tab-item.active .tab-icon {
+  color: #007AFF;
+}
 
-.tab-item.active .home-icon::before { content: '🏠'; }
+.home-icon::before { content: '⌂'; }
+.study-icon::before { content: '📖'; }
+.word-list-icon::before { content: '☰'; }
+.stats-icon::before { content: '▤'; }
+.mine-icon::before { content: '⚙'; }
+
+.tab-item.active .home-icon::before { content: '⌂'; }
 .tab-item.active .study-icon::before { content: '📖'; }
-.tab-item.active .word-list-icon::before { content: '📝'; }
-.tab-item.active .stats-icon::before { content: '📊'; }
-.tab-item.active .mine-icon::before { content: '👤'; }
+.tab-item.active .word-list-icon::before { content: '☰'; }
+.tab-item.active .stats-icon::before { content: '▤'; }
+.tab-item.active .mine-icon::before { content: '⚙'; }
 
 .tab-text {
-  font-size: 22rpx;
+  font-size: 20rpx;
   font-weight: 400;
   color: #8E8E93;
   line-height: 1;
