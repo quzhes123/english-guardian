@@ -94,12 +94,12 @@
 
 .checkin-btn {
   width: 160rpx;
-  height: 72rpx;
-  line-height: 72rpx;
+  height: 88rpx;
+  line-height: 88rpx;
   text-align: center;
   background: #2177FF;
   color: #FFFFFF;
-  font-size: 30rpx;
+  font-size: 28rpx;
   font-weight: 500;
   border-radius: 16rpx;
   border: none;

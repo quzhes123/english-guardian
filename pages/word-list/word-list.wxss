@@ -361,7 +361,7 @@
   height: 88rpx;
   background: #F5F5F7;
   color: #666666;
-  font-size: 30rpx;
+  font-size: 28rpx;
   border-radius: 16rpx;
   border: none;
   display: flex;
@@ -374,7 +374,7 @@
   height: 88rpx;
   background: #2177FF;
   color: #FFFFFF;
-  font-size: 30rpx;
+  font-size: 28rpx;
   border-radius: 16rpx;
   border: none;
   display: flex;

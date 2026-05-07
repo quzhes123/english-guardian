@@ -204,7 +204,9 @@
 
 .next-btn {
   width: 280rpx;
-  height: 80rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
   background: #2177FF;
   color: #FFFFFF;
   border-radius: 16rpx;
@@ -248,8 +250,9 @@
 
 .btn-retry, .btn-back {
   width: 240rpx;
-  height: 80rpx;
-  line-height: 80rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
   border-radius: 16rpx;
   font-size: 28rpx;
   font-weight: 500;
