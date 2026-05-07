@@ -11,8 +11,7 @@
       <text class="word">{{currentWord.word}}</text>
       <text class="phonetic">{{currentWord.phonetic}}</text>
       <view class="audio-btn" catchtap="playAudio">
-        <text class="audio-icon">♪</text>
-        <text class="audio-text">发音</text>
+        <text class="audio-text">播放发音</text>
       </view>
       <text class="hint">点击卡片查看释义</text>
     </view>
@@ -31,7 +30,7 @@
 
   <!-- 学习完成 -->
   <view class="complete-section" wx:if="{{isComplete}}">
-    <text class="complete-icon">&#x2713;</text>
+    <text class="complete-icon">V</text>
     <text class="complete-text">今日新词学习完成</text>
     <text class="complete-sub">太棒了，记得明天继续学习</text>
     <button class="btn-back" bindtap="goBack">返回首页</button>

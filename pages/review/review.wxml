@@ -14,7 +14,7 @@
         <text class="word">{{item.word}}</text>
         <text class="phonetic">{{item.phonetic}}</text>
         <view class="audio-btn" catchtap="playAudio" data-word="{{item.word}}">
-          <text class="audio-icon">&#x266B;</text>
+          <text class="audio-icon">听</text>
         </view>
       </view>
       <view class="card-back">
@@ -24,7 +24,7 @@
   </view>
 
   <view class="empty-state" wx:if="{{reviewWords.length === 0}}">
-    <text class="empty-icon">&#x2713;</text>
+    <text class="empty-icon">V</text>
     <text class="empty-text">今日没有需要复习的单词</text>
     <text class="empty-sub">学有余力？可以继续学习新词</text>
     <button class="btn-study" bindtap="goToStudy">去学习</button>

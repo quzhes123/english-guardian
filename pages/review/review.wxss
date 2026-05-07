@@ -87,8 +87,9 @@
 }
 
 .audio-icon {
-  font-size: 28rpx;
+  font-size: 22rpx;
   color: #2177FF;
+  font-weight: 500;
 }
 
 /* 空状态 */

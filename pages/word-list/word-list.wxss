@@ -40,36 +40,40 @@
   font-weight: 300;
 }
 
+.word-scroll {
+  flex: 1;
+  height: 0; /* 配合 flex:1 让内容区自动填充 */
+}
+
+.word-list {
+  padding: 0 20rpx 20rpx;
+}
+
+/* 字母导航 - 吸顶效果 */
 .letter-nav {
   display: flex;
   flex-wrap: wrap;
   padding: 16rpx 20rpx;
-  background: #FFFFFF;
-  border-bottom: 1rpx solid #E5E5E5;
+  background: #F5F5F7;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  gap: 4rpx;
 }
 
 .letter-item {
-  width: 48rpx;
-  height: 48rpx;
-  line-height: 48rpx;
+  width: 44rpx;
+  height: 44rpx;
+  line-height: 44rpx;
   text-align: center;
-  font-size: 22rpx;
+  font-size: 20rpx;
   color: #666666;
-  margin: 4rpx;
+  border-radius: 50%;
 }
 
 .letter-item.active {
   background: #2177FF;
   color: #FFFFFF;
-  border-radius: 50%;
-}
-
-.word-scroll {
-  flex: 1;
-}
-
-.word-list {
-  padding: 20rpx;
 }
 
 .letter-section {
@@ -83,14 +87,15 @@
   padding: 12rpx 0;
   background: #F5F5F7;
   position: sticky;
-  top: 0;
+  top: 60rpx; /* 配合 letter-nav 高度，避免被遮住 */
+  z-index: 5;
 }
 
 .word-item {
   background: #FFFFFF;
   padding: 24rpx;
   border-radius: 14rpx;
-  margin-bottom: 12rpx;
+  margin-top: 12rpx;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -141,6 +146,7 @@
 }
 
 .audio-icon-small {
-  font-size: 28rpx;
+  font-size: 22rpx;
   color: #2177FF;
+  font-weight: 500;
 }
