@@ -108,6 +108,7 @@
 .checkin-btn.disabled {
   background: #F0F0F0;
   color: #8A8A8A;
+  text-align: center;
 }
 
 /* 今日任务区域 */
