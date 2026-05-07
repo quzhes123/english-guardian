@@ -34,7 +34,7 @@
 }
 
 .tab-item.active .tab-icon {
-  color: #00B42A;
+  color: #007AFF;
 }
 
 .tab-text {
@@ -45,5 +45,5 @@
 }
 
 .tab-item.active .tab-text {
-  color: #00B42A;
+  color: #007AFF;
 }
