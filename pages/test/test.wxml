@@ -34,7 +34,7 @@
     <!-- 题目 -->
     <view class="question-card">
       <text class="question-type">{{testMode === 'word2meaning' ? '选择中文释义' : '默写英文单词'}}</text>
-      <text class="question-word">{{currentQuestion.word || currentQuestion.meaning}}</text>
+      <text class="question-word">{{testMode === 'meaning2word' ? currentQuestion.meaning : currentQuestion.word}}</text>
       <text class="question-hint" wx:if="{{testMode === 'meaning2word'}}">请在下方输入英文单词</text>
     </view>
 
