@@ -123,6 +123,7 @@
 .btn-study {
   width: 240rpx;
   height: 88rpx;
+  line-height: normal;
   background: #2177FF;
   color: #FFFFFF;
   font-size: 28rpx;
